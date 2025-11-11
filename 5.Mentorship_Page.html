@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyHub — Mentorship</title>
+  <meta name="description" content="Mentorship page for StudyHub. Senior students help juniors with courses, projects, and career prep." />
+</head>
+<body>
+  <!-- Mentorship Page (HTML only; CSS/JS will be added later) -->
+  <header>
+    <h1>StudyHub</h1>
+    <p>Peer Mentorship by Senior Students</p>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="materials.html">Materials</a>
+      <a href="groups.html">Study Groups</a>
+      <a href="internships.html">Internships</a>
+      <a href="mentors.html" aria-current="page">Mentors</a>
+      <a href="departments.html">Departments</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Intro -->
+    <section id="intro">
+      <h2>Mentorship Program</h2>
+      <p>Get guidance from senior students on courses, projects, study tips, and internships.</p>
+      <p>Note: Mentors listed here are senior students from different departments.</p>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works">
+      <h2>How It Works</h2>
+      <ol>
+        <li>Browse mentor profiles below.</li>
+        <li>Contact a mentor by email to request help.</li>
+        <li>Agree on time and topic together.</li>
+      </ol>
+    </section>
+
+    <!-- Quick search placeholder (no JS yet) -->
+    <section id="quick-search">
+      <h2>Find a Mentor</h2>
+      <form action="#" method="get">
+        <label for="dept-filter">Department:</label>
+        <select id="dept-filter" name="department">
+          <option value="">All</option>
+          <option value="cs">Computer Science</option>
+          <option value="is">Information Systems</option>
+          <option value="ee">Electrical Engineering</option>
+          <option value="me">Mechanical Engineering</option>
+          <option value="ba">Business Administration</option>
+          <option value="ce">Civil Engineering</option>
+        </select>
+
+        <label for="topic-keyword">Keyword (e.g., Java, Circuits):</label>
+        <input id="topic-keyword" name="q" type="search" placeholder="Type a skill or topic" />
+
+        <button type="submit">Search (placeholder)</button>
+      </form>
+      <p>This search is a placeholder. We will make it work later with JavaScript.</p>
+    </section>
+
+    <!-- Mentor list -->
+    <section id="mentor-list">
+      <h2>Available Mentors</h2>
+      <p>Sample profiles (more will be added later).</p>
+
+      <article>
+        <h3>Hana Bekele — Computer Science (Year 4)</h3>
+        <p>Skills: JavaScript, HTML/CSS, Algorithms, Data Structures</p>
+        <p>Bio: Enjoys helping with web projects and coding interview prep.</p>
+        <p>Contact: <a href="mailto:hana.bekele@example.edu">hana.bekele@example.edu</a></p>
+      </article>
+
+      <article>
+        <h3>Yonas Tesfaye — Electrical Engineering (Year 5)</h3>
+        <p>Skills: Circuits, MATLAB, Signals, Control Systems</p>
+        <p>Bio: Can guide senior projects and lab reports.</p>
+        <p>Contact: <a href="mailto:yonas.tesfaye@example.edu">yonas.tesfaye@example.edu</a></p>
+      </article>
+
+      <article>
+        <h3>Lulit Alemu — Information Systems (Year 4)</h3>
+        <p>Skills: Databases (SQL), Excel, Systems Analysis</p>
+        <p>Bio: Good with requirement gathering and documentation.</p>
+        <p>Contact: <a href="mailto:lulit.alemu@example.edu">lulit.alemu@example.edu</a></p>
+      </article>
+
+      <article>
+        <h3>Samuel Girma — Mechanical Engineering (Year 4)</h3>
+        <p>Skills: CAD basics, Thermodynamics, Report Writing</p>
+        <p>Bio: Helps with study plans and exam revision.</p>
+        <p>Contact: <a href="mailto:samuel.girma@example.edu">samuel.girma@example.edu</a></p>
+      </article>
+
+      <article>
+        <h3>Rahel Mulu — Business Administration (Year 3)</h3>
+        <p>Skills: Marketing, Presentation Skills, Case Studies</p>
+        <p>Bio: Supports students preparing for business case competitions.</p>
+        <p>Contact: <a href="mailto:rahel.mulu@example.edu">rahel.mulu@example.edu</a></p>
+      </article>
+
+      <article>
+        <h3>Daniel Kinde — Civil Engineering (Year 5)</h3>
+        <p>Skills: Statics, Structural Basics, Project Planning</p>
+        <p>Bio: Can review project proposals and outlines.</p>
+        <p>Contact: <a href="mailto:daniel.kinde@example.edu">daniel.kinde@example.edu</a></p>
+      </article>
+    </section>
+
+    <!-- Request mentorship form -->
+    <section id="request-mentorship">
+      <h2>Request Mentorship</h2>
+      <p>Fill this form to request support from any senior student mentor.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your Details</legend>
+          <label for="req-name">Full Name</label>
+          <input id="req-name" name="name" type="text" required />
+
+          <label for="req-email">University Email</label>
+          <input id="req-email" name="email" type="email" required />
+
+          <label for="req-dept">Department</label>
+          <select id="req-dept" name="department" required>
+            <option value="">Select department</option>
+            <option value="cs">Computer Science</option>
+            <option value="is">Information Systems</option>
+            <option value="ee">Electrical Engineering</option>
+            <option value="me">Mechanical Engineering</option>
+            <option value="ba">Business Administration</option>
+            <option value="ce">Civil Engineering</option>
+          </select>
+
+          <label for="req-year">Year/Level</label>
+          <select id="req-year" name="year" required>
+            <option value="">Select year</option>
+            <option>Year 1</option>
+            <option>Year 2</option>
+            <option>Year 3</option>
+            <option>Year 4</option>
+            <option>Year 5</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Help Needed</legend>
+          <label for="req-topic">Topic/Skill</label>
+          <input id="req-topic" name="topic" type="text" placeholder="e.g., Data Structures, Circuits" required />
+
+          <label for="req-message">Short Message</label>
+          <textarea id="req-message" name="message" rows="4" placeholder="Describe what you need help with" required></textarea>
+
+          <p>Preferred Meeting Type:</p>
+          <label><input type="radio" name="meet" value="online" required /> Online</label>
+          <label><input type="radio" name="meet" value="in-person" /> In person</label>
+        </fieldset>
+
+        <label>
+          <input type="checkbox" name="agree" required />
+          I agree to communicate respectfully and schedule at a reasonable time.
+        </label>
+
+        <button type="submit">Submit Request (placeholder)</button>
+      </form>
+      <p>This form is for layout only. We will add functionality later.</p>
+    </section>
+
+    <!-- Become a mentor form -->
+    <section id="become-mentor">
+      <h2>Become a Mentor (Senior Students)</h2>
+      <p>Are you Year 3+ and want to help? Register below.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Mentor Details</legend>
+          <label for="m-name">Full Name</label>
+          <input id="m-name" name="name" type="text" required />
+
+          <label for="m-email">University Email</label>
+          <input id="m-email" name="email" type="email" required />
+
+          <label for="m-dept">Department</label>
+          <select id="m-dept" name="department" required>
+            <option value="">Select department</option>
+            <option value="cs">Computer Science</option>
+            <option value="is">Information Systems</option>
+            <option value="ee">Electrical Engineering</option>
+            <option value="me">Mechanical Engineering</option>
+            <option value="ba">Business Administration</option>
+            <option value="ce">Civil Engineering</option>
+          </select>
+
+          <label for="m-year">Year</label>
+          <select id="m-year" name="year" required>
+            <option value="">Select year</option>
+            <option>Year 3</option>
+            <option>Year 4</option>
+            <option>Year 5</option>
+          </select>
+
+          <label for="m-skills">Skills (comma-separated)</label>
+          <input id="m-skills" name="skills" type="text" placeholder="e.g., Java, SQL, MATLAB" required />
+
+          <label for="m-availability">Availability</label>
+          <input id="m-availability" name="availability" type="text" placeholder="e.g., Mon/Wed evenings" />
+        </fieldset>
+
+        <button type="submit">Register as Mentor (placeholder)</button>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Is mentorship free?</summary>
+        <p>Yes, it is peer support by senior students.</p>
+      </details>
+      <details>
+        <summary>How long is each session?</summary>
+        <p>Usually 30–60 minutes (decide with your mentor).</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact: studyhub@example.com • © 2025 StudyHub</p>
+  </footer>
+</body>
+</html>
