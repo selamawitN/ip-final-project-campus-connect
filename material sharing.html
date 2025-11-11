@@ -8,15 +8,13 @@
     <body style="background-color: rgb(255, 255, 252); 
     color: black ; 
     font-family: Arial, Helvetica, sans-serif; margin: 0;" >
-     <h1 style="background-color:rgb(87, 87, 103); color:white; padding: 15px ;text-align: center;"><b>MATERIAL SHARING</b> </h1> 
-     <br>
-     <br>  
+     <h1 style="background-color:rgb(87, 87, 103); color:white; padding: 15px ;text-align: center;"><b>MATERIAL SHARING</b> </h1>   
 <form style="text-align: center ; 
       padding: 15px;
       border-radius: 5px;
       margin-bottom: 20px;
       border: 0px solid #ddd;">
-      <p>please enter what year's material you are sharing</p>
+      <p style="font-size: large;"><strong>Choose what year's material you are sharing</strong> </p>
       <label>1st year</label>
 <input type="radio" name="yearofstudy"/>
 <label>2nd year</label>
@@ -28,7 +26,7 @@
 <label>5th year</label>
 <input type="radio" name="yearofstudy"/>
 <br>
-<p>please enter which department does this material belongs to</p>
+<p style="font-size: large;"><b>please select which department does this material belongs to</b></p>
 <label for="dept">:</label>
 
 <select style="width: 25%; height:10%;" id="dept" name="dept">
@@ -47,29 +45,51 @@
 <option value="Industrial Chemistry">Industrial Chemistry</option>
 <option value="Geology">Geology</option>
 </select>
+<p style="font-size: large;"><b>please select material type</b></p>
+<label for="dept">:</label>
+
+<select style="width: 25%; height:10%;" id="materialtype" name="materialtype">
+    <option value="Assignment">Assignment</option>
+    <option value="Power point">Power point</option>
+    <option value="Module">Module</option>
+    <option value="Lab Activities">Lab Activities</option>
+    <option value="Quiz">Quiz</option>
+    <option value="Mid">Mid</option>
+<option value="Class test">Class test</option>
+<option value="Final Exam">Final Exam</option>
+<option value="Reference">Reference</option>
+</select>
 <br>
+<div>
+        <br>
+        <label for="yeargiven"><b>Year given:</b></label>
+        <input style="padding: 8px; width:10%; text-align: left;" type="number" id="yeargiven" name="yeargiven" min="2012" max="2099" required/>
+</div>
+<br>
+
     <div>
         <br>
-        <label for="materialtitle"><b>Material title:</b> </label>
+        <label for="materialtitle"><b>Course:</b> </label>
         <input style="padding: 8px;width:75%;" type="text" ip="materialtitle" placeholder="Eg.INTERNET PROGRAMMING" required />
     </div>
     <br>
     <br>
      <div>
         <label for="fulln"><b>Full name: </b></label>
-        <input style="padding: 8px;width:76%;" type="text" ip="fulln" placeholder="Ornina Dereje" />
+        <input style="padding: 8px;width:76%;" type="text" ip="fulln" placeholder="Ornina Dereje(optional)" />
         </div>
         <br>
         <br>
         <div>
         <label for="file"><b>File:</b> </label>
-        <input style="padding: 8px;width:80%; height: 20%;" type="file" ip="file" name="file" placeholder="Upload your file here"/>
+        <input style="padding: 8px;width:80%; height: 20%;" type="file" ip="file" name="file" placeholder="Upload your file here" required/>
         </div>
         <br>
         <br>
         <br>
         <br>
         <div>
+            <input style="border-radius: 10px; text-align:center; padding: 8px;width:20%;" type="reset"/>
              <input style="border-radius: 10px; text-align:center; padding: 8px;width:20%;" type="submit"/>
         </div>
 
