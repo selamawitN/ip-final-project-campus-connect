@@ -4,29 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Study Groups — AASTU Campus Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-        <header>
+          <header>
         <nav class="navbar">
-            <div class="logo">UniConnect</div>
+            <div class="logo">Campus Connect</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="materials.html">Materials</a></li>
                 <li><a href="groups.html">Study Groups</a></li>
-                <li><a href="internships.html">Internships</a></li>
+                <li><a href="internship.html">Internships</a></li>
                 <li><a href="mentors.html">Mentors</a></li>
-                <li><a href="departments.html">Departments</a></li>
+                <li><a href="department.html">Departments</a></li>
             </ul>
         </nav>
     </header>
-    <div class="page-header">Study Groups</div>
+    <h2>Study Groups</h2>
 
     <section id="create-group">
-        <div class="section-title">Create a Study Group</div>
+        <h3>Create a Study Group</h3>
         <form action="#" method="post" aria-label="Create study group form">
             <div>
                 <input type="text" name="group_name" placeholder="Group name" required aria-label="Group name" />
-            </div>
+            </div><br>
             <div>
                 <select name="subject" required aria-label="Subject">
                     <option value="">Select subject</option>
@@ -36,7 +37,7 @@
                     <option>Biology</option>
                     <option>Economics</option>
                 </select>
-            </div>
+            </div><br>
             <div>
                 <select name="department" aria-label="Department">
                     <option value="">Select department (optional)</option>
@@ -45,13 +46,13 @@
                     <option>Business</option>
                     <option>Arts</option>
                 </select>
-            </div>
+            </div><br>
             <div>
                 <input type="datetime-local" name="meeting_time" aria-label="Meeting schedule" />
-            </div>
+            </div><br>
             <div>
                 <input type="number" name="max_members" min="1" placeholder="Max members" aria-label="Maximum members" />
-            </div>
+            </div><br>
             <div>
                 <button type="submit">Create Group</button>
             </div>
@@ -59,7 +60,7 @@
     </section>
 
     <section id="search-groups">
-        <div class="section-title">Search / Filter Groups</div>
+        <h3>Search / Filter Groups</h3>
         <form action="#" method="get" aria-label="Search groups form">
             <div>
                 <input type="text" name="q" placeholder="Search by name or subject" aria-label="Search query" />
@@ -79,49 +80,74 @@
     </section>
 
     <section id="groups-list">
-        <div class="section-title">Available Study Groups</div>
+        <h4>Available Study Groups</h4>
         <ul>
             <li>
                 <article class="group-card" aria-label="Algebra Study Group">
-                    <div class="group-name">Algebra Study Group</div>
-                    <div class="group-meta">Subject: Mathematics</div>
-                    <div class="group-meta">Meeting: Tuesdays 16:00</div>
-                    <div class="group-meta">Members: 4 / 8</div>
+                    <div class="group-name"><strong>Algebra Study Group</strong> </div>
+                    <div class="group-meta"><b>Subject:</b> Mathematics</div>
+                    <div class="group-meta"><b>Meeting:</b>  Tuesdays 16:00</div>
+                    <div class="group-meta"><b>Members:</b> 4 / 8</div>
                     <div>
                         <button type="button" name="join" aria-label="Join Algebra Study Group">Join Group</button>
-                    </div>
+                    </div><br>
                 </article>
             </li>
 
             <li>
                 <article class="group-card" aria-label="Intro to Programming">
-                    <div class="group-name">Intro to Programming</div>
-                    <div class="group-meta">Subject: Computer Science</div>
-                    <div class="group-meta">Meeting: Fridays 14:30</div>
-                    <div class="group-meta">Members: 6 / 10</div>
+                    <div class="group-name"><b>Intro to Programming</b> </div>
+                    <div class="group-meta"><b>Subject: </b> Computer Science</div>
+                    <div class="group-meta"><b> Meeting:</b> Fridays 14:30</div>
+                    <div class="group-meta"><b>Members:</b> 6 / 10</div>
                     <div>
                         <button type="button" name="join" aria-label="Join Intro to Programming">Join Group</button>
-                    </div>
+                    </div><br>
                 </article>
             </li>
 
             <li>
                 <article class="group-card" aria-label="Organic Chemistry Review">
-                    <div class="group-name">Organic Chemistry Review</div>
+                    <div class="group-name"><b>Organic Chemistry Review</b> </div>
                     <div class="group-meta">Subject: Biology</div>
                     <div class="group-meta">Meeting: Monday 18:00</div>
                     <div class="group-meta">Members: 3 / 6</div>
                     <div>
                         <button type="button" name="join" aria-label="Join Organic Chemistry Review">Join Group</button>
-                    </div>
+                    </div><br>
                 </article>
             </li>
 
             <!-- Additional group items will be rendered here -->
         </ul>
     </section>
-     <footer>
-        <p>&copy; 2025 UniConnect. All Rights Reserved.</p>
-    </footer>
+      <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+      <div class="contact-info">
+        <p>Contact Us:</p>
+        <ul>
+          <li>Email: support@campusconnect.com</li>
+          <li>Phone: +251 912 345 678</li>
+          <li>Address: University Campus, Addis Ababa, Ethiopia</li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <p>Follow Us:</p>
+        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://t.me" target="_blank" class="social-icon">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
