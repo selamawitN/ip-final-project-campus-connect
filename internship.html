@@ -22,70 +22,114 @@
             </ul>
         </nav>
     </header>
-    <div>
-        <div>
-            <h1>Internship Alerts</h1>
+    <div class="main-container">
+        <div class="page-header">
+            <h1>Software Engineering Internships</h1>
             <p>Discover your next professional opportunity.</p>
         </div>
 
-        <div>
-            <label for="department-filter">Filter by Field:</label>
-            <select id="department-filter">
-                <option value="All">All Departments</option>
-                <option value="architecture">Architecture</option>
-                <option value="chemical">Chemical Engineering</option>
-                <option value="civil">Civil Engineering</option>
-                <option value="electrical">Electrical and Computer Engineering</option>
-                <option value="electro">Electromecanical Engineering</option>
-                <option value="enviro">Enviromental Engineering</option>
-                <option value="mechanical">Mechanical Engineering</option>
-                <option value="mining">Mining Engineering</option>
-                <option value="software">Software Engineering</option>
+        <div class="filter-section">
+            <label for="year-filter">Filter by Year:</label>
+            <select id="year-filter">
+                <option value="all">All Years</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+                <option value="5">5th Year</option>
             </select>
         </div>
 
         <div id="internship-list">
-            <div>
-                <h2>Software Engineering (Frontend)</h2>
-                <p><strong>Position:</strong> Intern</p>
-                <p><strong>Company:</strong> Private Client</p>
-                <p><strong>Department:</strong> Software</p>
-                <p><strong>Deadline:</strong> 06-11-2025</p>
+           <div class="internship-item" data-years="5">
+                <h2>
+                    Web Development Intern
+                    <span class="badge">Internship</span>
+                </h2>
+                
+                <div class="internship-details">
+                       <div class="detail-item">
+                        <strong>Position:</strong> Junior Intern
+                        <strong>Company:</strong> Campus Tech Hub
+                        <strong>Year:</strong> 2nd Year
+                        <strong>Deadline:</strong> 15-12-2025
+                    </div>
+                </div>
+
+                <div class="meta-info">
+                    <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                    <span><i class="fas fa-clock"></i> Posted: 2 days ago</span>
+                </div>
+
                 <p><strong>Requirements:</strong></p>
                 <ul>
-                    <li>Must know Flutter(Dart)</li>
-                    <li>Must be able to work independently and add new features</li>
-                    <li>Must be a current university student</li>
+                    <li>Basic understanding of HTML and CSS</li>
+                    <li>Deep knowledge of JavaScript</li>
+                    <li>Willingness to learn and grow</li>
+                    <li>Currently in 5th year of Software Engineering</li>
                 </ul>
-                <a href="#">Apply Now (Link)</a>
+                <a href="#" class="apply-btn">Apply Now</a>
                 <hr>
             </div>
 
-            <div>
-                <h2>Field WASH supervisor</h2>
-                <p><strong>Position:</strong> Intern</p>
-                <p><strong>Company:</strong> Cooperazione Internazionale (COOPI)</p>
-                <p><strong>Department:</strong> Civil</p>
-                <p><strong>Deadline:</strong> 15-12-2025</p>
+            <div class="internship-item" data-years="3,4,5">
+                <h2>
+                    Backend Development Intern
+                    <span class="badge">Internship</span>
+                </h2>
+                <div class="internship-details">
+                    <div class="detail-item">
+                        <strong>Position:</strong> Backend Intern
+                        <strong>Company:</strong> Data Systems Ltd.
+                        <strong>Year:</strong> 3rd to 5th Year
+                        <strong>Deadline:</strong> 30-11-2025
+                    </div>
+                </div>
+
+                <div class="meta-info">
+                    <span><i class="fas fa-map-marker-alt"></i> Hybrid</span>
+                    <span><i class="fas fa-clock"></i> Posted: 3 days ago</span>
+                </div>
+
                 <p><strong>Requirements:</strong></p>
                 <ul>
-                    <li>Must be an undergraduate student of any university</li>
+                    <li>Knowledge of Node.js or Python</li>
+                    <li>Understanding of databases (SQL/NoSQL)</li>
+                    <li>Basic API development experience</li>
+                    <li>Currently in 3rd to 5th year of Software Engineering</li>
                 </ul>
-                <a href="#">Apply Now (Link)</a>
+                <a href="#" class="apply-btn">Apply Now</a>
                 <hr>
             </div>
+            
+            <div class="internship-item" data-years="4">
+                <h2>
+                    Full Stack Developer (React & Node.js)
+                    <span class="badge">Internship</span>
+                </h2>
+                
+                <div class="internship-details">
+                    <div class="detail-item">
+                        <strong>Position:</strong> Full Stack Intern
+                        <strong>Company:</strong> Enterprise Solutions
+                        <strong>Year:</strong> 4th Year
+                        <strong>Deadline:</strong> 20-01-2026
+                    </div>
+                </div>
 
-            <div>
-                <h2>UX/UI Design Intern</h2>
-                <p><strong>Position:</strong> Intern</p>
-                <p><strong>Company:</strong> Innovate Design Studio</p>
-                <p><strong>Department:</strong> Software</p>
-                <p><strong>Deadline:</strong> 20-11-2025</p>
+                <div class="meta-info">
+                    <span><i class="fas fa-map-marker-alt"></i> On-site</span>
+                    <span><i class="fas fa-clock"></i> Posted: 1 day ago</span>
+                </div>
+
                 <p><strong>Requirements:</strong></p>
                 <ul>
-                    <li>We want an enthusiastic candidate who is ready to explore the design world.</li>
+                    <li>Experience with React.js framework</li>
+                    <li>Knowledge of Node.js and Express</li>
+                    <li>Understanding of REST APIs</li>
+                    <li>Database management skills</li>
+                    <li>Currently in 4th year of Software Engineering</li>
                 </ul>
-                <a href="#">Apply Now (Link)</a>
+                <a href="#" class="apply-btn">Apply Now</a>
                 <hr>
             </div>
         </div>
