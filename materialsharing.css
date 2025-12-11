@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+.navbar {
+    background:  #545353;
+    color: white;
+    padding: 20px 5px !important;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background: #545353;            
+    color: white;
+}
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 230;
+}
+
+.nav-links a:hover {
+    font-weight: 400;
+
+}
+
+.page-title {
+    background:white;
+    padding: 25px 0;
+    text-align: center;
+    color: black;
+}
+
+.page-title h1 {
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.form-card {
+    background: white;
+    width: 80%;
+    padding: 40px;
+    border-radius: 15px;
+    border: black;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    border-right: 5px solid #545353;
+
+}
+
+.section-title {
+    font-size: 28px;
+    color:  black;
+    margin-top: 25px;
+}
+.input-box, .file-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #56565a;
+    border-radius: 10px;
+    margin: 10px 0 20px 0;
+    font-size: 16px;
+}
+.year-options label {
+    margin-right: 40px;
+    font-size: 18px;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    padding: 6px 12px ;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn.reset{
+    margin-right: 20px;
+}
+.button-group{
+    display: flex;
+    justify-content: space-between;
+}
+.button-group :hover {
+    background-color: #fefeff;
+    color: white;
+    border: 1px solid black;
+    font-weight:  700;
+}
+.materials-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+.share{
+    text-align: center;
+    background: #949191;
+    padding: 40px;
+    margin-top: 20px;
+}
