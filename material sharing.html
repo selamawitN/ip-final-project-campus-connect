@@ -1,70 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>material sharing</title>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    </head>
-    <body style="background-color: rgb(255, 255, 252); 
-    color: black ; 
-    font-family: Arial, Helvetica, sans-serif; margin: 0;" >
-    <header>
-        <nav class="navbar">
-            <div class="logo">Campus Connect</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="materials.html">Materials</a></li>
-                <li><a href="groups.html">Study Groups</a></li>
-                <li><a href="internship.html">Internships</a></li>
-                <li><a href="mentors.html">Mentors</a></li>
-                <li><a href="departments.html">Departments</a></li>
-            </ul>
-        </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">Campus Connect</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="submit.html">Materials</a></li>
+            <li><a href="#">Study <br> Groups</a></li>
+            <li><a href="#">Internships</a></li>
+            <li><a href="#">Mentors</a></li>
+            <li><a href="#">Departments</a></li>
+        </ul>
+    </nav>
+
+    <!-- TITLE BAR -->
+    <header class="page-title">
+        <h1>MATERIAL SHARING</h1>
     </header>
 
-    
-     <h1 style="background-color:rgb(87, 87, 103); color:white; padding: 15px ;text-align: center;"><b>MATERIAL SHARING</b> </h1>   
-<form style="text-align: center ; 
-      padding: 15px;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      border: 0px solid #ddd;">
-      <p style="font-size: large;"><strong>Choose what year's material you are sharing</strong> </p>
-      <label>1st year</label>
-<input type="radio" name="yearofstudy"/>
-<label>2nd year</label>
-<input type="radio" name="yearofstudy"/>
-<label>3rd year</label>
-<input type="radio" name="yearofstudy"/>
-<label>4th year </label>
-<input type="radio" name="yearofstudy"/>
-<label>5th year</label>
-<input type="radio" name="yearofstudy"/>
-<br>
-<p style="font-size: large;"><b>please select which department does this material belongs to</b></p>
-<label for="dept">:</label>
+    <!-- FORM CARD -->
+    <section class="container">
+        <div class="form-card">
 
-<select style="width: 25%; height:10%;" id="dept" name="dept">
-    <option value="freshman">freshman</option>
-    <option value="Software">Software</option>
-    <option value="Mechanical">Mechanical</option>
-    <option value="ElectroMechanical">ElectroMechanical</option>
-<option value="Chemical">Chemical</option>
-<option value="Civil">Civil</option>
-<option value="Electrical">Electrical</option>
-<option value="Mining">Mining</option>
-<option value="Enviromental">Enviromental</option>
-<option value="Architecture">Architecture</option>
-<option value="Food Science">Food Science</option>
-<option value="Biotechnology">Biotechnology</option>
-<option value="Industrial Chemistry">Industrial Chemistry</option>
-<option value="Geology">Geology</option>
-</select>
-<p style="font-size: large;"><b>please select material type</b></p>
-<label for="dept">:</label>
+            <h2 class="section-title">Choose The Year of Study</h2>
 
-<select style="width: 25%; height:10%;" id="materialtype" name="materialtype">
+            <div class="year-options">
+                <label><input type="radio" name="year" value="2nd"> 2nd Year</label>
+                <label><input type="radio" name="year" value="3rd"> 3rd Year</label>
+                <label><input type="radio" name="year" value="4th"> 4th Year</label>
+                <label><input type="radio" name="year" value="5th"> 5th Year</label>
+            </div>
+
+            <h2 class="section-title">Department</h2>
+            <select id="department" class="input-box">
+                <option>Software</option>
+            </select>
+
+            <h2 class="section-title">Material Type</h2>
+            <select id="type" class="input-box">
+
     <option value="Assignment">Assignment</option>
     <option value="Power point">Power point</option>
     <option value="Module">Module</option>
@@ -74,73 +58,33 @@
 <option value="Class test">Class test</option>
 <option value="Final Exam">Final Exam</option>
 <option value="Reference">Reference</option>
-</select>
-<br>
-<div>
-        <br>
-        <label for="yeargiven"><b>Year given:</b></label>
-        <input style="padding: 8px; width:10%; text-align: left;" type="number" id="yeargiven" name="yeargiven" min="2012" max="2099" required/>
+            </select>
+
+            <h2 class="section-title">Upload Material</h2>
+            <input type="file" id="file" class="file-input">
+            
+           <div class="button-group">
+        <button type="reset" class="btn reset">Reset</button>
+        <button type="submit" class="btn submit">Submit</button>
+    </div>  
 </div>
-<br>
-
-    <div>
-        <br>
-        <label for="materialtitle"><b>Course:</b> </label>
-        <input style="padding: 8px;width:75%;" type="text" ip="materialtitle" placeholder="Eg.INTERNET PROGRAMMING" required />
-    </div>
-    <br>
-    <br>
-     <div>
-        <label for="fulln"><b>Full name: </b></label>
-        <input style="padding: 8px;width:76%;" type="text" ip="fulln" placeholder="Ornina Dereje(optional)" />
-        </div>
-        <br>
-        <br>
-        <div>
-        <label for="file"><b>File:</b> </label>
-        <input style="padding: 8px;width:80%; height: 20%;" type="file" ip="file" name="file" placeholder="Upload your file here" required/>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div>
-            <input style="border-radius: 10px; text-align:center; padding: 8px;width:20%;" type="reset"/>
-             <input style="border-radius: 10px; text-align:center; padding: 8px;width:20%;" type="submit"/>
-        </div>
-
-</form>
-<br>
-
-<h2 style="text-align: center; "><i>THANK YOU FOR SHARING!</i></iTHANK></h2>
- <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Campus Connect. All rights reserved.</p>
-      <div class="contact-info">
-        <p>Contact Us:</p>
-        <ul>
-          <li>Email: support@campusconnect.com</li>
-          <li>Phone: +251 912 345 678</li>
-          <li>Address: University Campus, Addis Ababa, Ethiopia</li>
-        </ul>
-      </div>
-      <div class="social-media">
-        <p>Follow Us:</p>
-        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com" target="_blank" class="social-icon">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://t.me" target="_blank" class="social-icon">
-          <i class="fab fa-telegram"></i>
-        </a>
-        <a href="https://www.tiktok.com" target="_blank" class="social-icon">
-          <i class="fab fa-tiktok"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-    </body>
+    </section>
     
+<div class="share"><h3 class="thanks">THANK YOU FOR SHARING!</h2>
+
+<footer class="footer">
+    <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+
+    <div class="social">
+        <a><i class="fab fa-linkedin"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+        <a><i class="fab fa-telegram"></i></a>
+        <a><i class="fab fa-tiktok"></i></a>
+    </div>
+</footer>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
