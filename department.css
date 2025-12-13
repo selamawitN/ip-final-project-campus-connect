@@ -1,12 +1,4 @@
 /* Using the 'Poppins' font defined in homepage.css */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #F5F7FA; /* Matches homepage background */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #444; /* Matches homepage text color */
-}
 
 /* Remove the old 'header' styling, as we use the universal header now */
 
