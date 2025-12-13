@@ -1,8 +1,9 @@
+
 const courseData = [
     {
         field: "Engineering Department info",
         overview: "The engineering faculty offers various technology and engineering fields aimed at producing highly skilled professionals.",
-        years: [] // No specific year breakdown for general info
+        years: []
     },
     {
         field: "Freshman (Common Courses)",
@@ -15,22 +16,22 @@ const courseData = [
                         semester: "Semester 1",
                         courses: [
                             { code: "MATH101", title: "Mathematics for Natural Science", credit: 3, prereq: "None" },
-                            { code: "PSYC101", title: "General Psychology", credit: 2, prereq: "None" },
+                            { code: "PSYC101", title: "General Psychology", credit: 3, prereq: "None" },
                             { code: "ENGL101", title: "Communicative English Skills I", credit: 3, prereq: "None" },
                             { code: "PHYS101", title: "General Physics", credit: 3, prereq: "None" },
-                            { code: "LOGI101", title: "Logic & Critical Thinking", credit: 2, prereq: "None" },
-                            { code: "GEOG101", title: "Geography of Ethiopia and the Horn", credit: 2, prereq: "None" },
-                            { code: "PE101", title: "Physical fitness", credit: 1, prereq: "None" }
+                            { code: "LOGI101", title: "Logic & Critical Thinking", credit: 3, prereq: "None" },
+                            { code: "GEOG101", title: "Geography of Ethiopia and the Horn", credit: 3, prereq: "None" },
+                            { code: "PE101", title: "Physical fitness", credit: 0, prereq: "None" }
                         ]
                     },
                     {
                         semester: "Semester 2",
                         courses: [
-                            { code: "ETEG102", title: "Emerging Technology for Engineers", credit: 2, prereq: "None" },
-                            { code: "ENTR102", title: "Entrepreneurship for Engineers", credit: 2, prereq: "None" },
+                            { code: "ETEG102", title: "Emerging Technology for Engineers", credit: 3, prereq: "None" },
+                            { code: "ENTR102", title: "Entrepreneurship for Engineers", credit: 3, prereq: "None" },
                             { code: "ENGL102", title: "Communicative English Skills II", credit: 3, prereq: "ENGL101" },
                             { code: "CIVE102", title: "Civic & Ethical Education", credit: 2, prereq: "None" },
-                            { code: "MATH102", title: "Applied Mathematics I", credit: 3, prereq: "MATH101" },
+                            { code: "MATH102", title: "Applied Mathematics I", credit: 4, prereq: "MATH101" },
                             { code: "ANTH102", title: "Social Anthropology", credit: 2, prereq: "None" },
                             { code: "INCL102", title: "Inclusiveness", credit: 2, prereq: "None" }
                         ]
@@ -49,21 +50,21 @@ const courseData = [
                     {
                         semester: "Semester 1",
                         courses: [
-                            { code: "HIST211", title: "History of Ethiopia and the Horn", credit: 2, prereq: "None" },
+                            { code: "HIST211", title: "History of Ethiopia and the Horn", credit: 3, prereq: "None" },
                             { code: "SE2111", title: "Fundamentals of programming I", credit: 3, prereq: "None" },
                             { code: "MATH211", title: "Discrete Mathematics", credit: 3, prereq: "MATH102" },
-                            { code: "SE2112", title: "Introduction to Software engineering and computing", credit: 3, prereq: "None" },
+                            { code: "SE2112", title: "Introduction to Software engineering and computing", credit: 4, prereq: "None" },
                             { code: "GTRN211", title: "Global Trends", credit: 2, prereq: "None" },
-                            { code: "ECON211", title: "Economics", credit: 2, prereq: "None" }
+                            { code: "ECON211", title: "Economics", credit: 3, prereq: "None" }
                         ]
                     },
                     {
                         semester: "Semester 2",
                         courses: [
                             { code: "STAT212", title: "Probability and Statistics", credit: 3, prereq: "MATH102" },
-                            { code: "SE2121", title: "Fundamentals of programming II", credit: 3, prereq: "SE2111" },
-                            { code: "SE2122", title: "Data Communication and computer networks", credit: 3, prereq: "None" },
-                            { code: "SE2123", title: "Database Systems", credit: 3, prereq: "None" },
+                            { code: "SWEG2103", title: "Fundamentals of Programming II", credit: 3, prereq: "SWEG2101" },
+                            { code: "SWEG2105", title: "Data Communication and Computer Networks", credit: 4, prereq: "None" },
+                            { code: "SWEG2106", title: "Database Systems", credit: 4, prereq: "None" },
                             { code: "HARD212", title: "Digital Logic Design", credit: 3, prereq: "PHYS101" }
                         ]
                     }
@@ -75,21 +76,21 @@ const courseData = [
                     {
                         semester: "Semester 1",
                         courses: [
-                            { code: "SE3111", title: "Data Structures & Algorithms", credit: 3, prereq: "SE2121, MATH211" },
-                            { code: "SE3112", title: "System analysis and modeling", credit: 3, prereq: "SE2112" },
-                            { code: "HARD311", title: "Computer Architecture and Organization", credit: 3, prereq: "HARD212" },
-                            { code: "SE3113", title: "Object Oriented programming", credit: 3, prereq: "SE2121" },
-                            { code: "SE3114", title: "Internet programming I", credit: 3, prereq: "SE2121" }
+                            { code: "SWEG3103", title: "Data Structure and Algorithms", credit: 4, prereq: "SWEG2103" },
+                            { code: "SWEG3109", title: "System Analysis and Modeling", credit: 4, prereq: "SWEG2101" },
+                            { code: "SWEG3105", title: "Computer Organization and Architecture", credit: 4, prereq: "Engr 2004" },
+                            { code: "SWEG3101", title: "Object Oriented Programming", credit: 3, prereq: "None" },
+                            { code: "SWEG3107", title: "Internet Programming I", credit: 3, prereq: "SWEG2105" }
                         ]
                     },
                     {
                         semester: "Semester 2",
                         courses: [
-                            { code: "SE3121", title: "Operating Systems", credit: 3, prereq: "HARD311" },
-                            { code: "SE3122", title: "Formal Language and Automata theory", credit: 3, prereq: "MATH211" },
-                            { code: "SE3123", title: "Internet programming II", credit: 3, prereq: "SE3114" },
-                            { code: "SE3124", title: "Advanced programming", credit: 3, prereq: "SE3113" },
-                            { code: "SE3125", title: "Software requirement Engineering", credit: 3, prereq: "SE3112" }
+                            { code: "SWEG3106", title: "Operating Systems", credit: 4, prereq: "SWEG3105" },
+                            { code: "SWEG3110", title: "Formal Language and Automata Theory", credit: 3, prereq: "SWEG2105" },
+                            { code: "SWEG3102", title: "Internet Programming II", credit: 3, prereq: "SWEG3107" },
+                            { code: "SWEG3108", title: "Advanced Programming", credit: 4, prereq: "SWEG3101" },
+                            { code: "SWEG3104", title: "Software Requirements Engineering", credit: 3, prereq: "SWEG3109" }
                         ]
                     }
                 ]
@@ -100,23 +101,25 @@ const courseData = [
                     {
                         semester: "Semester 1",
                         courses: [
-                            { code: "HARD411", title: "Principle of Computer Design", credit: 3, prereq: "HARD311" },
-                            { code: "SE4111", title: "Mobile programming and computing", credit: 3, prereq: "SE3124" },
-                            { code: "SE4112", title: "Software design and architecture", credit: 3, prereq: "SE3125" },
-                            { code: "AI4111", title: "Introduction to Artificial Intelligence", credit: 3, prereq: "STAT212, SE3111" },
-                            { code: "GRAPH411", title: "Computer Graphics", credit: 3, prereq: "SE3111" }
+                            { code: "SWEG4101", title: "Principles of Compiler Design", credit: 3, prereq: "SWEG3110, SWEG2102" },
+                            { code: "SWEG4103", title: "Mobile Computing and Programming", credit: 3, prereq: "SWEG2106, SWEG3108" },
+                            { code: "SWEG4105", title: "Software Design and Architecture", credit: 3, prereq: "SWEG3109" },
+                            { code: "SWEG4107", title: "Introduction to Artificial Intelligence", credit: 3, prereq: "SWEG2105, SWEG3103" },
+                            { code: "SWEG4109", title: "Computer Graphics", credit: 3, prereq: "SWEG2102, SWEG3103" },
+                            { code: "IETP4115", title: "Integrated Engineering team project", credit: 3, prereq: "None" }
+            
                         ]
                     },
                     {
                         semester: "Semester 2",
                         courses: [
-                            { code: "AI4121", title: "Introduction Machine Learning", credit: 3, prereq: "AI4111" },
-                            { code: "SE4121", title: "Software quality Assurance and testing", credit: 3, prereq: "SE4112" },
-                            { code: "HARD412", title: "Embedded System", credit: 3, prereq: "HARD311" },
-                            { code: "SE4122", title: "Software Project Management", credit: 3, prereq: "SE4112" },
-                            { code: "HCI4121", title: "Human computer Interaction", credit: 3, prereq: "SE3112" },
-                            { code: "RES4121", title: "Research method in software engineering", credit: 2, prereq: "None" },
-                            { code: "INT4121", title: "Industrial Internship", credit: 6, prereq: "None" }
+                            { code: "SWEG4112", title: "Introduction to Machine learning", credit: 3, prereq: "SWEG4103" },
+                            { code: "SWEG4106", title: "Software Quality Assurance and Testing", credit: 3, prereq: "SWEG3104, SWEG4105" },
+                            { code: "SWEG4102", title: "Embedded Systems", credit: 3, prereq: "SWEG3101, SWEG3106" },
+                            { code: "SWEG4104", title: "Software Project Management", credit: 3, prereq: "SWEG3104" },
+                            { code: "SWEG4110", title: "Human Computer Interaction", credit: 3, prereq: "SWEG4109" },
+                            { code: "SWEG4108", title: "Research Methods in Software Engineering", credit: 2, prereq: "SWEG4105" },
+                            { code: "SWEG4114", title: "Industrial Internship", credit: 6, prereq: "SWEG4112" }
                         ]
                     }
                 ]
@@ -127,22 +130,23 @@ const courseData = [
                     {
                         semester: "Semester 1",
                         courses: [
-                            { code: "RES5111", title: "Senior Research Project Phase I", credit: 2, prereq: "RES4121" },
-                            { code: "SE5111", title: "Distributed System", credit: 3, prereq: "SE3121, SE2122" },
-                            { code: "BIGD511", title: "Introduction to big data Analytics", credit: 3, prereq: "AI4121" },
-                            { code: "SE5112", title: "Open source software paradigms", credit: 2, prereq: "None" },
-                            { code: "SE5113", title: "Software componenet design", credit: 3, prereq: "SE4112" },
-                            { code: "SEC5111", title: "Computer system security", credit: 3, prereq: "SE2122" },
-                            { code: "SE5114", title: "Software Configuration Management", credit: 2, prereq: "SE4112" }
+                            { code: "SWEG5101", title: "Senior Research Project Phase I", credit: 0, prereq: "SWEG4114" },
+                            { code: "SWEG5111", title: "Distributed System", credit: 4, prereq: "SWEG3101, SWEG2106" },
+                            { code: "SWEG5201", title: "Introduction to Big Data Analytics", credit: 3, prereq: "SWEG4112" }, // Prereq inferred from prev data
+                            { code: "SWEG5109", title: "Open source software paradigms", credit: 3, prereq: "SWEG4104" },
+                            { code: "SWEG5107", title: "Software component design", credit: 3, prereq: "SWEG4105" },
+                            { code: "SWEG5105", title: "Computer system security", credit: 3, prereq: "SWEG2106" },
+                            { code: "SWEG5103", title: "Software Configuration Management", credit: 3, prereq: "SWEG4104" },
+                            { code: "SWEG5203",title:"Data Mining and Data Warehousing",credit:3,prereq:"None" }, 
+                            { code: "SWEG5205", title: "Simulation and Modeling", credit: 3, prereq: "None" }, 
                         ]
                     },
                     {
                         semester: "Semester 2",
                         courses: [
-                            { code: "RES5121", title: "Senior Research Project II", credit: 3, prereq: "RES5111" },
-                            { code: "SE5121", title: "Selected topics in software Engineering", credit: 3, prereq: "None" },
-                            { code: "SE5122", title: "Software evolution and maintenance", credit: 3, prereq: "SE5114" },
-                            { code: "SE5123", title: "Software defined system", credit: 3, prereq: "SE5111" }
+                            { code: "SWEG5102", title: "Senior Research Project II", credit: 6, prereq: "SWEG5101" },
+                            { code: "SWEG5106", title: "Software evolution and maintenance", credit: 3, prereq: "SWEG4106, SWEG5107" },
+                            { code: "SWEG5108", title: "Software defined system", credit: 3, prereq: "SWEG2106, SWEG3101, SWEG5107" }
                         ]
                     }
                 ]
