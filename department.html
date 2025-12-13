@@ -1,181 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Department Information</title>
-<link rel="stylesheet" href="new.css">
-<!-- Linking Google Font for better typography -->
-<link href="fonts.googleapis.com" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect – Departments</title>
+    <!-- Links to universal CSS (which also contains the Poppins/Cormorant fonts) -->
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="homepage.css"> 
+    <!-- Links to specific department CSS -->
+    <link rel="stylesheet" href="department.css"> 
 </head>
 <body>
 
-<header>
-    <h1>Course Finder</h1>
-    <p>Select field → year → semester to view courses.</p>
-</header>
-
-<main>
-    <!-- ================= ENGINEERING (Parent Section) ================= -->
-    <section class="department-section">
-        <h2>Engineering Faculty</h2>
-        <article class="dept-info-box">
-            <strong>Overview:</strong> The engineering faculty offers various technology and engineering fields aimed at producing highly skilled professionals.
-        </article>
-
-        <!-- ================= FRESHMAN (Sub-Section) ================= -->
-        <details class="course-details">
-            <summary class="section-title">Freshman (Common Courses)</summary>
-            <div class="details-content">
-                <article class="dept-info-box">
-                    <strong>Overview:</strong> These are common foundational courses taken by all freshman students.
-                </article>
-
-                <details class="course-details">
-                    <summary>Year 1</summary>
-                    <div class="details-content">
-                        <details class="course-details">
-                            <summary>Semester 1</summary>
-                            <ul>
-                                <li>Mathematics for Natural Science</li>
-                                <li>General Psychology</li>
-                                <li>Communicative English Skills I</li>
-                                <li>General Physics</li>
-                                <li>Logic & Critical Thinking</li>
-                                <li>Geography of Ethiopia and the Horn</li>
-                                <li>Physical fitness</li>
-                            </ul>
-                        </details>
-
-                        <details class="course-details">
-                            <summary>Semester 2</summary>
-                            <ul>
-                                <li>Emerging Technology for Engineers</li>
-                                <li>Entrepreneurship for Engineers</li>
-                                <li>Communicative English Skills II</li>
-                                <li>Civic & Ethical Education</li>
-                                <li>Applied Mathematics I</li>
-                                <li>Social Anthropology</li>
-                                <li>Inclusiveness</li>
-                            </ul>
-                        </details>
-                    </div>
-                </details>
+    <!-- === START: Universal Header (Copied from index.html) === -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="image/image copy 5.png" alt="Campus Connect Logo" class="logo-img">
+                Campus Connect
             </div>
-        </details>
+            
+            <button class="burger-menu" id="burgerMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="materials.html">Materials</a></li>
+                <li><a href="groups.html">Study Groups</a></li>
+                <li><a href="internship.html">Internships</a></li>
+                <li><a href="mentors.html">Mentors</a></li>
+                <li><a href="department.html" class="active">Departments</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- === END: Universal Header === -->
 
-        <!-- ================= SOFTWARE ENGINEERING (Sub-Section) ================= -->
-        <details class="course-details">
-            <summary class="section-title">Software Engineering</summary>
-            <div class="details-content">
-                <article class="dept-info-box">
-                    <strong>Overview:</strong> Focuses on software development, system design, AI, and modern computing technologies.
-                </article>
+    <main class="department-main">
+        <h2 class="section-title">Engineering Course Finder</h2>
+        <p class="subtitle">Use the filters below to find specific courses quickly.</p>
 
-                <!-- Year 2, 3, 4, 5 follow the same nested pattern -->
-                <details class="course-details"><summary>Year 2</summary>
-                    <div class="details-content">
-                        <details class="course-details"><summary>Semester 1</summary>
-                            <ul>
-                                <li>History of Ethiopia and the Horn</li>
-                                <li>Fundamentals of programming I</li>
-                                <li>Discrete Mathematics</li>
-                                <li>Introduction to Software engineering and computing</li>
-                                <li>Global Trends</li>
-                                <li>Economics</li>
-                            </ul>
-                        </details>
-                        <details class="course-details"><summary>Semester 2</summary>
-                             <ul>
-                                <li>Probability and Statistics</li>
-                                <li>Fundamentals of programming II</li>
-                                 <li>Data Communication and computer networks</li>
-                                 <li>Database Systems</li>
-                                <li>Digital Logic Design</li>
-                            </ul>
-                        </details>
-                    </div>
-                </details>
+        <div class="filters-container">
+            <select id="filter-field">
+                <option value="">Select Field (All)</option>
+                <option value="Freshman (Common Courses)">Freshman (Common Courses)</option>
+                <option value="Software Engineering">Software Engineering</option>
+            </select>
 
-                <details class="course-details"><summary>Year 3</summary>
-                     <div class="details-content">
-                        <details class="course-details"><summary>Semester 1</summary>
-                            <ul>
-                                <li>Data Structures & Algorithms</li>
-                                <li>System analysis and modeling</li>
-                                <li>Computer Architecture and Organization</li>
-                                <li>Object Oriented programming</li>
-                                <li>Internet programming I</li>
-                            </ul>
-                        </details>
-                        <details class="course-details"><summary>Semester 2</summary>
-                            <ul>
-                                <li>Operating Systems</li>
-                                <li>Formal Language and Automata theory</li>
-                                <li>Internet programming II</li>
-                                <li>Advanced programming</li>
-                                <li>Software requirement Engineering</li>
-                            </ul>
-                        </details>
-                    </div>
-                </details>
+            <input type="number" id="filter-year" placeholder="Search by Year (e.g., 2)" />
+            <input type="number" id="filter-semester" placeholder="Search by Semester (e.g., 1)" />
+        </div>
 
-                <details class="course-details"><summary>Year 4</summary>
-                     <div class="details-content">
-                        <details class="course-details"><summary>Semester 1</summary>
-                            <ul>
-                                <li>Principle of Computer Design</li>
-                                <li>Mobile programming and computing</li>
-                                <li>Software design and architecture</li>
-                                <li>Introduction to Artificial Intelligence</li>
-                                <li>Computer Graphics</li>
-                            </ul>
-                        </details>
-                        <details class="course-details"><summary>Semester 2</summary>
-                            <ul>
-                                <li>Introduction Machine Learning</li>
-                                <li>Software quality Assurance and testing</li>
-                                <li>Embedded System</li>
-                                <li>Software Project Management</li>
-                                <li>Human computer Interaction</li>
-                                <li>Research method in software engineering</li>
-                                <li>Industrial Internship</li>
-                            </ul>
-                        </details>
-                    </div>
-                </details>
+        <div id="results-container">
+            <p class="no-results">
+                Select an option or start typing to filter courses.
+            </p>
+        </div>
+    </main>
 
-                 <details class="course-details"><summary>Year 5</summary>
-                     <div class="details-content">
-                        <details class="course-details"><summary>Semester 1</summary>
-                            <ul>
-                                <li>Senior Research Project Phase I</li>
-                                <li>Distributed System</li>
-                                <li>Introduction to big data Analytics</li>
-                                <li>Open source software paradigms</li>
-                                <li>Software component design</li>
-                                <li>Computer system security</li>
-                                <li>Software Configuration Management</li>
-                            </ul>
-                        </details>
-                        <details class="course-details"><summary>Semester 2</summary>
-                            <ul>
-                                <li>Senior Research Project II</li>
-                                <li>Selected topics in software Engineering</li>
-                                <li>Software evolution and maintenance</li>
-                                <li>Software defined system</li>
-                            </ul>
-                        </details>
-                    </div>
-                </details>
-
+    <!-- === START: Universal Footer (Copied from index.html) === -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h4>Campus Connect</h4>
+                <p>Connecting students for better learning, collaboration, and career opportunities. Our platform bridges the gap between academic resources and student needs.</p>
             </div>
-        </details>
-    </section>
-</main>
-<footer>
-    <p>&copy; 2025 University Course Finder</p>
-</footer>
-<script src="new.js"></script>
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Email: support@campusconnect.com</li>
+                    <li><i class="fas fa-phone"></i> Phone: +251 912 345 678</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Address: University Campus, Addis Ababa, Ethiopia</li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://t.me" target="_blank" class="social-icon">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- === END: Universal Footer === -->
+
+    <!-- Universal JS (for navigation/burger menu) -->
+    <script src="homepage.js"></script>
+    <!-- Department specific JS -->
+    <script src="departmentdata.js"></script>
+    <script src="departmentscript.js"></script>
 </body>
 </html>
+
