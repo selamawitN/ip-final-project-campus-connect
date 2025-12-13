@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Department Course Finder Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Engineering Course Finder</h1>
+      <p>Use the filters below to find specific courses quickly.</p>
+    </header>
+
+    <main>
+      <div class="filters-container">
+        <!-- Changed from input to select/options -->
+        <select id="filter-field">
+          <option value="">Select Field (All)</option>
+          <option value="Freshman (Common Courses)">
+            Freshman (Common Courses)
+          </option>
+          <option value="Software Engineering">Software Engineering</option>
+        </select>
+
+        <input type="number" id="filter-year" placeholder="Search by Year " />
+        <input
+          type="number"
+          id="filter-semester"
+          placeholder="Search by Semester "
+        />
+      </div>
+
+      <!-- Results will be displayed here dynamically -->
+      <div id="results-container">
+        <p class="no-results">
+          Select an option or start typing to filter courses.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Engineering Department</p>
+    </footer>
+
+    <!-- data.js file from previous response is required -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
