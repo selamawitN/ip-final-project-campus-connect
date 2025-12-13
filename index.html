@@ -11,8 +11,16 @@
 
     <header>
         <nav class="navbar">
-            <div class="logo">Campus Connect</div>
-            <ul class="nav-links">
+            <div class="logo">
+                <img src="img/pro logo-modified.png" alt="Campus Connect Logo" class="logo-img">
+                Campus Connect
+            </div>
+            
+            <button class="burger-menu" id="burgerMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="materials.html">Materials</a></li>
                 <li><a href="groups.html">Study Groups</a></li>
@@ -20,18 +28,21 @@
                 <li><a href="mentors.html">Mentors</a></li>
                 <li><a href="department.html">Departments</a></li>
             </ul>
-             <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Welcome to Campus Connect</h1>
-        <p>Your platform for sharing materials, forming study groups, and getting internship or mentorship support.</p>
-        <a href="materials.html" class="cta-btn">Get Started</a>
+        <div class="hero-particles" id="heroParticles"></div>
+        
+        <div class="hero-content">
+            <h1>Welcome to Campus Connect</h1>
+            <p>Your platform for sharing materials, forming study groups, and getting internship or mentorship support.</p>
+            <a href="materials.html" class="cta-btn">Get Started</a>
+        </div>
+        
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </section>
 
     <section class="features">
@@ -39,64 +50,92 @@
 
         <div class="feature-container">
             <div class="feature-card">
-                <h3>Study Materials</h3>
-                <p>Access and share notes, books, and resources with classmates.</p>
+                <img src="img/study material.jpg" 
+                     alt="Study materials and books" class="feature-image">
+                <div class="feature-content">
+                    <h3>Study Materials</h3>
+                    <p>Access and share notes, books, and resources with classmates.</p>
+                </div>
             </div>
 
             <div class="feature-card">
-                <h3>Study Groups</h3>
-                <p>Join or create study groups based on courses and interests.</p>
+                <img src="img/download.webp" 
+                     alt="Students studying together" class="feature-image">
+                <div class="feature-content">
+                    <h3>Study Groups</h3>
+                    <p>Join or create study groups based on courses and interests.</p>
+                </div>
             </div>
 
             <div class="feature-card">
-                <h3>Internship Alerts</h3>
-                <p>Stay updated on local and international internship opportunities.</p>
+                <img src="img/internship.jpg" 
+                     alt="Professional internship" class="feature-image">
+                <div class="feature-content">
+                    <h3>Internship Alerts</h3>
+                    <p>Stay updated on local and international internship opportunities.</p>
+                </div>
             </div>
 
             <div class="feature-card">
-                <h3>Mentorship</h3>
-                <p>Connect with experienced senior students for guidance.</p>
+                <img src="img/mentorship.webp" 
+                     alt="Mentorship meeting" class="feature-image">
+                <div class="feature-content">
+                    <h3>Mentorship</h3>
+                    <p>Connect with experienced senior students for guidance.</p>
+                </div>
             </div>
 
             <div class="feature-card">
-                <h3>Departments</h3>
-                <p>Explore different departments and find the best fit for your goals.</p>
+                <img src="img/department.webp" 
+                     alt="University department building" class="feature-image">
+                <div class="feature-content">
+                    <h3>Departments</h3>
+                    <p>Explore different departments and find the best fit for your goals.</p>
+                </div>
             </div>
         </div>
     </section>
     
    <footer>
     <div class="footer-container">
-      <div class="contact-info">
-        <p>Contact Us:</p>
-        <ul>
-          <li>Email: support@campusconnect.com</li>
-          <li>Phone: +251 912 345 678</li>
-          <li>Address: University Campus, Addis Ababa, Ethiopia</li>
-        </ul>
-      </div>
-      <div class="social-media">
-        <p>Follow Us:</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com" target="_blank" class="social-icon">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://t.me" target="_blank" class="social-icon">
-                <i class="fab fa-telegram"></i>
-            </a>
-            <a href="https://www.tiktok.com" target="_blank" class="social-icon">
-                <i class="fab fa-tiktok"></i>
-            </a>
+        <div class="footer-info">
+            <h4>Campus Connect</h4>
+            <p>Connecting students for better learning, collaboration, and career opportunities. Our platform bridges the gap between academic resources and student needs.</p>
         </div>
-      </div>
+        
+        <div class="contact-info">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Email: support@campusconnect.com</li>
+                <li><i class="fas fa-phone"></i> Phone: +251 912 345 678</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: University Campus, Addis Ababa, Ethiopia</li>
+            </ul>
+        </div>
+        
+        <div class="social-media">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://t.me" target="_blank" class="social-icon">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
     </div>
+    
     <div class="copyright">
-      <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+        <p>&copy; 2025 Campus Connect. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="index.js"></script>
 </body>
 </html>
