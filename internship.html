@@ -23,118 +23,196 @@
             </ul>
         </nav>
     </header>
-    <div class="main-container">
-        <div class="page-header">
-            <h1>Software Engineering Internships</h1>
-            <p>Discover your next professional opportunity.</p>
+    
+<div class="container">
+        <div class="page-title">
+            <h1><i class="fas fa-laptop-code"> </i> Software Engineering Internships</h1>
+            <p>For 2nd to 5th year Software Engineering students</p>
         </div>
 
-        <div class="filter-section">
-            <label for="year-filter">Filter by Year:</label>
-            <select id="year-filter">
-                <option value="all">All Years</option>
-                <option value="2">2nd Year</option>
-                <option value="3">3rd Year</option>
-                <option value="4">4th Year</option>
-                <option value="5">5th Year</option>
-            </select>
-        </div>
-
-        <div id="internship-list">
-           <div class="internship-item" data-years="5">
-                <h2>
-                    Web Development Intern
-                    <span class="badge">Internship</span>
-                </h2>
-                
-                <div class="internship-details">
-                       <div class="detail-item">
-                        <strong>Position:</strong> Junior Intern <br>
-                        <strong>Company:</strong> Campus Tech Hub <br>
-                        <strong>Year:</strong> 2nd Year <br>
-                        <strong>Deadline:</strong> 15-12-2025 <br>
-                    </div>
-                </div>
-
-                <div class="meta-info">
-                    <span><i class="fas fa-map-marker-alt"></i> Remote</span>
-                    <span><i class="fas fa-clock"></i> Posted: 2 days ago</span>
-                </div>
-
-                <p><strong>Requirements:</strong></p>
-                <ul>
-                    <li>Basic understanding of HTML and CSS</li>
-                    <li>Deep knowledge of JavaScript</li>
-                    <li>Willingness to learn and grow</li>
-                    <li>Currently in 5th year of Software Engineering</li>
-                </ul>
-                <a href="#" class="apply-btn">Apply Now</a>
-                <hr>
-            </div>
-
-            <div class="internship-item" data-years="3,4,5">
-                <h2>
-                    Backend Development Intern
-                    <span class="badge">Internship</span>
-                </h2>
-                <div class="internship-details">
-                    <div class="detail-item">
-                        <strong>Position:</strong> Backend Intern<br>
-                        <strong>Company:</strong> Data Systems Ltd.<br>
-                        <strong>Year:</strong> 3rd to 5th Year<br>
-                        <strong>Deadline:</strong> 30-11-2025<br>
-                    </div>
-                </div>
-
-                <div class="meta-info">
-                    <span><i class="fas fa-map-marker-alt"></i> Hybrid</span>
-                    <span><i class="fas fa-clock"></i> Posted: 3 days ago</span>
-                </div>
-
-                <p><strong>Requirements:</strong></p>
-                <ul>
-                    <li>Knowledge of Node.js or Python</li>
-                    <li>Understanding of databases (SQL/NoSQL)</li>
-                    <li>Basic API development experience</li>
-                    <li>Currently in 3rd to 5th year of Software Engineering</li>
-                </ul>
-                <a href="#" class="apply-btn">Apply Now</a>
-                <hr>
-            </div>
-            
-            <div class="internship-item" data-years="4">
-                <h2>
-                    Full Stack Developer (React & Node.js)
-                    <span class="badge">Internship</span>
-                </h2>
-                
-                <div class="internship-details">
-                    <div class="detail-item">
-                        <strong>Position:</strong> Full Stack Intern<br>
-                        <strong>Company:</strong> Enterprise Solutions<br>
-                        <strong>Year:</strong> 4th Year<br>
-                        <strong>Deadline:</strong> 20-01-2026<br>
-                    </div>
-                </div>
-
-                <div class="meta-info">
-                    <span><i class="fas fa-map-marker-alt"></i> On-site</span>
-                    <span><i class="fas fa-clock"></i> Posted: 1 day ago</span>
-                </div>
-
-                <p><strong>Requirements:</strong></p>
-                <ul>
-                    <li>Experience with React.js framework</li>
-                    <li>Knowledge of Node.js and Express</li>
-                    <li>Understanding of REST APIs</li>
-                    <li>Database management skills</li>
-                    <li>Currently in 4th year of Software Engineering</li>
-                </ul>
-                <a href="#" class="apply-btn">Apply Now</a>
-                <hr>
-            </div>
+  <div class="filters">
+    <div class="filter-item">
+        Year: 
+        <select id="year-filter">
+            <option value="all">All year </option>
+            <option value="2">2nd year </option>
+            <option value="3">3rd year </option>
+            <option value="4">4th year </option>
+            <option value="5">5th year </option>
+        </select>
+    </div>
+    
+    <div class="filter-item">
+        Type: 
+        <select id="stipend-filter">
+            <option value="all">All type </option>
+            <option value="paid">Paid</option>
+            <option value="unpaid">Unpaid</option>
+        </select>
+    </div>
+    
+    <div class="filter-item">
+        Work: 
+        <select id="worktype-filter">
+            <option value="all">All</option>
+            <option value="remote">Remote</option>
+            <option value="on-site">On-site</option>
+            <option value="hybrid">Hybrid</option>
+        </select>
+    </div>
+ </div>
+        
+ <div class="internship-card" data-years="4,5" data-stipend="paid" data-worktype="remote">
+    <h2>Software Engineer Intern</h2>
+    <div class="badges"> <span class="badge paid">Paid: 3000birr/month</span> <span class="badge remote">Remote</span> </div>
+    
+    <div class="basic-info">
+        <div><i class="fas fa-building"></i> <b>Company:</b> Frontieri Consult PLC</div>
+        <div><i class="fas fa-user-graduate"></i> <b>Year:</b> 4th & 5th Year</div>
+        <div><i class="fas fa-calendar"></i> <b>Deadline:</b> 25-12-2025</div>
+        <div><i class="fas fa-clock"></i> <b>Duration:</b> 3-6 months</div>
+    </div>
+    
+    <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        <b>Location:</b> Remote (Addis Ababa, Ethiopia, Namibia St, Lingo Tower 8th Floor)
+        <a href="https://maps.google.com" target="_blank"> <i class="fas fa-external-link-alt"></i> View Map </a>
+    </div>
+    
+    <div class="requirements">
+        <h3>Requirements:</h3>
+        <ul>
+            <li>Currently in 4th or 5th year Software Engineering</li>
+            <li>Proficiency in Python or JavaScript/Node.js</li>
+            <li>Basic understanding of databases and SQL</li>
+            <li>Strong problem-solving skills</li>
+        </ul>
+    </div>
+    
+    <div class="apply-section">
+        <button class="apply-btn" onclick="window.open('https://forms.gle/ujo9hsfZ5yNqbNaC7', '_blank')">
+            <i class="fas fa-paper-plane"></i> Apply Now
+        </button>
+        <div class="how-to-apply"> <b>How to apply:</b> Submit through the Google Form link above. </div>
+    </div>
+</div>
+        
+ <div class="internship-card" data-years="3,4,5" data-stipend="paid" data-worktype="remote">
+    <h2>Web Development Intern</h2>
+    <div class="badges">
+        <span class="badge paid">Paid: 3500birr/month</span>
+        <span class="badge remote">Remote</span>
+    </div>
+    
+    <div class="basic-info">
+        <div><i class="fas fa-building"></i> <b>Company:</b> Qimem Solutions</div>
+        <div><i class="fas fa-user-graduate"></i> <b>Year:</b> 3rd to 5th Year</div>
+        <div><i class="fas fa-calendar"></i> <b>Deadline:</b> 20-12-2025</div>
+        <div><i class="fas fa-clock"></i> <b>Duration:</b> 3 months</div>
+    </div>
+    
+    <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        <b>Location:</b> Remote work (No physical office required)
+    </div>
+    
+    <div class="requirements">
+        <h3>Requirements:</h3>
+        <ul>
+            <li>Basic HTML and CSS knowledge</li>
+            <li>JavaScript (ES6+) proficiency</li>
+            <li>Familiarity with React or Vue.js</li>
+            <li>Understanding of Git version control</li>
+        </ul>
+    </div>
+    
+    <div class="apply-section">
+        <button class="apply-btn" onclick="window.open('https://www.linkedin.com/jobs/view/web-development-intern-at-qimem-solutions-4269648819/?originalSubdomain=et')">
+            <i class="fas fa-paper-plane"></i> Apply Now
+        </button>
+        <div class="how-to-apply">
+            <b>How to apply:</b> Email through the Linkedin website.
         </div>
     </div>
+</div>
+        
+ <div class="internship-card" data-years="3,4" data-stipend="unpaid" data-worktype="remote">
+    <h2>UI/UX Designing Intern</h2>
+    
+    <div class="badges">
+        <span class="badge unpaid">Unpaid</span>
+        <span class="badge remote">Remote</span>
+    </div>
+    
+    <div class="basic-info">
+        <div><i class="fas fa-building"></i> <b>Company:</b> Eagle Lion System Technology (ELST)</div>
+        <div><i class="fas fa-user-graduate"></i> <b>Year:</b> 3rd & 4th Year</div>
+        <div><i class="fas fa-calendar"></i> <b>Deadline:</b> 30-12-2025</div>
+        <div><i class="fas fa-clock"></i> <b>Duration:</b> 3 months</div>
+    </div>
+    
+    <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        <b>Location:</b> Remote (Mentorship sessions online)
+    </div>
+    
+    <div class="requirements">
+        <h3>Requirements:</h3>
+        <ul>
+            <li>Experience with React Native or Flutter</li>
+            <li>Understanding of mobile UI/UX principles</li>
+            <li>Knowledge of state management</li>
+            <li>Portfolio of projects</li>
+        </ul>
+    </div>
+    
+    <div class="apply-section">
+        <button class="apply-btn" onclick="window.open('https://www.eaglelionsystems.com/')">
+            <i class="fas fa-paper-plane"></i> Apply Now
+        </button>
+        <div class="how-to-apply"> <b>How to apply:</b> Apply through contact@eaglelionsystems.com </div>
+    </div>
+</div>
+        
+<div class="internship-card" data-years="5" data-stipend="unpaid" data-worktype="hybrid">
+    <h2>Telegram Bot Developer Intern</h2>
+    <div class="badges">
+        <span class="badge unpaid">Unpaid</span>
+        <span class="badge hybrid">Hybrid</span>
+    </div>
+    
+    <div class="basic-info">
+        <div><i class="fas fa-building"></i> <b>Company:</b> Yaltopia Tech</div>
+        <div><i class="fas fa-user-graduate"></i> <b>Year:</b> 5th Year Only</div>
+        <div><i class="fas fa-calendar"></i> <b>Deadline:</b> 15-01-2026</div>
+        <div><i class="fas fa-clock"></i> <b>Duration:</b> 6 months</div>
+    </div>
+    
+    <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        <b>Location:</b> Lemi Kura, Ayat Mall, Addis Ababa
+        <a href="https://maps.google.com" target="_blank"> <i class="fas fa-external-link-alt"></i> View Map </a>
+    </div>
+    
+    <div class="requirements">
+        <h3>Requirements:</h3>
+        <ul>
+            <li>Basic experience with Telegram Bot API</li>
+            <li>Familiarity with Python, Node.js, or any bot-building frameworks</li>
+            <li>Interest in automation, chatbots, and conversational UX</li>
+        </ul>
+    </div>
+    
+     <div class="apply-section">
+        <button class="apply-btn" onclick="window.open('https://erp.yaltopia.com/job_application/new?job_title=HR-OPN-2025-0011', '_blank')">
+            <i class="fas fa-paper-plane"></i> Apply Now
+        </button>
+        <div class="how-to-apply"> <b>How to apply:</b> Apply through the above link. </div>
+    </div>
+  </div>
+
+</div>
+    
  <footer>
     <div class="footer-container">
       <p>&copy; 2025 Campus Connect. All rights reserved.</p>
