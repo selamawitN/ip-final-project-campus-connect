@@ -1,4 +1,3 @@
-<script>
 
 window.onload = function() {
   
@@ -60,4 +59,4 @@ document.querySelectorAll('.apply-btn').forEach(btn => {
     });
 });
 
-</script>
+
