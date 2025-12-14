@@ -1,4 +1,3 @@
-
 window.onload = function() {
   
     document.getElementById('year-filter').onchange = filterJobs;
@@ -8,10 +7,11 @@ window.onload = function() {
     // Load applied jobs
     let save = localStorage.getItem('applied') || '';
     
-    document.querySelectorAll('.apply-btn').forEach(btn => {
-        let job = btn.closest('.internship-card').querySelector('h2').textContent;
+    document.querySelectorAll('.internship-card').forEach(card => {
+        let job = card.querySelector('h2').textContent;
         
         if (save.includes(job)) {
+            let btn = card.querySelector('.apply-btn');
             btn.innerHTML = '✓ Applied';
             btn.style.background = 'gray';
         }
@@ -38,8 +38,9 @@ function filterJobs() {
     });
 }
 
+
 document.querySelectorAll('.apply-btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
+    btn.onclick = function(e) {
         e.preventDefault();
         
         let job = this.closest('.internship-card').querySelector('h2').textContent;
@@ -47,16 +48,16 @@ document.querySelectorAll('.apply-btn').forEach(btn => {
         
         window.open(url, '_blank');
         
-       setTimeout(() => {
-            if (confirm("Did you submit form for: " + job + "?\n OK = YES \n CANCEL = NO" )) {
-                this.innerHTML = '✓ Applied';
-                this.style.background = 'gray';
+        window.onfocus = function() {
+            if (confirm("Did you submit form for: " + job + "?\n OK = YES \n CANCEL = NO")) {
+                // Mark as applied
+                btn.innerHTML = '✓ Applied';
+                btn.style.background = 'gray';
                 
                 let old = localStorage.getItem('applied') || '';
                 localStorage.setItem('applied', old + '|' + job);
             }
-        }, 1000); 
-    });
+            window.onfocus = null; 
+        };
+    };
 });
-
-
