@@ -4,9 +4,12 @@
 }
 body{
     font-family: "Montserrat", sans-serif;
+    background-color: lightgray;
+
 }
+
 .navbar {
-    background:  #545353;
+    background:  black;
     color: white;
     padding: 20px 5px !important;
     align-items: center;
@@ -29,7 +32,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 25px 40px;
-    background: #545353;            
+    background: black;             
     color: white;
 }
 .logo {
@@ -55,7 +58,7 @@ body{
 }
 
 .page-title {
-    background:white;
+    background:lightgray;
     padding: 25px 0;
     text-align: center;
     color: black;
@@ -65,8 +68,9 @@ body{
     color: black;
     font-size: 36px;
     font-weight: bold;
-    background-color: white;
+    background-color: lightgrey;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -80,7 +84,7 @@ body{
     border-radius: 15px;
     border: black;
     box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    border-right: 5px solid #545353;
+    border-right: 5px solid black;
 
 }
 
@@ -89,14 +93,16 @@ body{
     color:  black;
     margin-top: 25px;
 }
+
 .input-box, .file-input {
     width: 100%;
-    padding: 15px;
-    border: 2px solid #56565a;
+    padding: 10px;
+    border: 2px solid black;
     border-radius: 10px;
-    margin: 10px 0 20px 0;
+    margin: 5px 0 20px 0;
     font-size: 16px;
 }
+
 .year-options label {
     margin-right: 40px;
     font-size: 18px;
@@ -128,6 +134,7 @@ body{
     border: 1px solid black;
     font-weight:  700;
 }
+
 .materials-box {
     background: white;
     padding: 30px;
@@ -137,8 +144,14 @@ body{
     font-size: 20px;
 }
 .share{
+    background: black;
+    color: white;
     text-align: center;
-    background: #949191;
-    padding: 40px;
-    margin-top: 20px;
+    padding: 20px;
+    margin-top: 40px;
+
 }
+.social i{
+    color: white !important;
+}
+
