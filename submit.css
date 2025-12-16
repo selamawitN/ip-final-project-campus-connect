@@ -4,7 +4,7 @@
 }
 body{
     font-family: "Montserrat", sans-serif;
-    background-color: #;
+    background-color: lightgray;
 
 }
 .navbar {
@@ -12,7 +12,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 25px 40px;
-    background: #545353;             
+    background: black;            
     color: white;
 }
 .logo {
@@ -38,16 +38,33 @@ body{
 
 
 
-.main-title{
-    color: #000000;
-    background-color: # !important;
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    padding: 25px 0;
-    margin: 0 0 20px ;
+.main-title {
+      position: relative;
+    background-color: lightgray;
+    padding: 25px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
+.title-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+}
+
+.search-bar {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    padding: 8px 12px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
 .materials-container {
     max-width: 80%;
     margin: 40px auto;
@@ -61,7 +78,7 @@ body{
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(0,0,0,0.15);
-    border-top: 5px solid #545353;
+    border-top: 5px solid black;
 }
 
 .material-card h3 {
@@ -89,4 +106,31 @@ body{
     color: black;
     border: 1px solid black;
     font-weight:  700;
+}
+.delete {
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 10px;
+    padding: 8px 10px;
+    background: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.delete:hover {
+    background: #fefeff;
+    color: black;
+    border: 1px solid black;
+    font-weight:  700;
+}
+
+.share{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
