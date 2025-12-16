@@ -6,11 +6,10 @@
     <title>Campus Connect</title>
     <link rel="stylesheet" href="materialsharing.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="logo">Campus Connect</div>
         <ul class="nav-links">
@@ -22,69 +21,63 @@
             <li><a href="#">Departments</a></li>
         </ul>
     </nav>
-
-    <!-- TITLE BAR -->
     <header class="page-title">
         <h1>MATERIAL SHARING</h1>
     </header>
-
-    <!-- FORM CARD -->
     <section class="container">
         <div class="form-card">
+            <div style="margin-bottom: 20px;">
+                <label for="materialtitle"><b>Course:</b></label>
+                <input type="text" id="materialtitle" placeholder="Eg. INTERNET PROGRAMMING" required class="input-box"/>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label for="fulln"><b>Full name:</b></label>
+                <input type="text" id="fulln" placeholder="Ornina Dereje (optional)" class="input-box"/>
 
+            </div>
             <h2 class="section-title">Choose The Year of Study</h2>
-
-            <div class="year-options">
+            <div class="year-options" style="margin-bottom: 20px;">
                 <label><input type="radio" name="year" value="2nd"> 2nd Year</label>
                 <label><input type="radio" name="year" value="3rd"> 3rd Year</label>
                 <label><input type="radio" name="year" value="4th"> 4th Year</label>
                 <label><input type="radio" name="year" value="5th"> 5th Year</label>
             </div>
-
             <h2 class="section-title">Department</h2>
-            <select id="department" class="input-box">
+            <select id="department" class="input-box" style="margin-bottom: 20px;">
                 <option>Software</option>
             </select>
-
             <h2 class="section-title">Material Type</h2>
-            <select id="type" class="input-box">
-
-    <option value="Assignment">Assignment</option>
-    <option value="Power point">Power point</option>
-    <option value="Module">Module</option>
-    <option value="Lab Activities">Lab Activities</option>
-    <option value="Quiz">Quiz</option>
-    <option value="Mid">Mid</option>
-<option value="Class test">Class test</option>
-<option value="Final Exam">Final Exam</option>
-<option value="Reference">Reference</option>
+            <select id="type" class="input-box" style="margin-bottom: 20px;">
+                <option value="Assignment">Assignment</option>
+                <option value="Power point">Power point</option>
+                <option value="Module">Module</option>
+                <option value="Lab Activities">Lab Activities</option>
+                <option value="Quiz">Quiz</option>
+                <option value="Mid">Mid</option>
+                <option value="Class test">Class test</option>
+                <option value="Final Exam">Final Exam</option>
+                <option value="Reference">Reference</option>
             </select>
-
             <h2 class="section-title">Upload Material</h2>
-            <input type="file" id="file" class="file-input">
-            
-           <div class="button-group">
-        <button type="reset" class="btn reset">Reset</button>
-        <button type="submit" class="btn submit">Submit</button>
-    </div>  
-</div>
+            <input type="file" id="file" class="file-input" style="margin-bottom: 30px;">
+            <div class="button-group">
+                <button type="reset" class="btn reset">Reset</button>
+                <button type="submit" class="btn submit">Submit</button>
+            </div>
+        </div>
     </section>
-    
-<div class="share"><h3 class="thanks">THANK YOU FOR SHARING!</h2>
-
-<footer class="footer">
-    <p>&copy; 2025 Campus Connect. All rights reserved.</p>
-
-    <div class="social">
-        <a><i class="fab fa-linkedin"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-telegram"></i></a>
-        <a><i class="fab fa-tiktok"></i></a>
+    <div class="share">
+        <h3 class="thanks">THANK YOU FOR SHARING!</h3>
+        <footer class="footer">
+            <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </footer>
     </div>
-</footer>
-  </div>
-
-<script src="script.js"></script>
-
+    <script src="upload.js"></script>
 </body>
 </html>
