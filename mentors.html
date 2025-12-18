@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mentorship — Campus Connect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Campus Connect Logo" class="logo-img">
+                <span class="logo-text">Campus Connect</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="materials.html">Materials</a></li>
+                <li><a href="groups.html">Study Groups</a></li>
+                <li><a href="internship.html">Internships</a></li>
+                <li><a href="mentors.html" class="active">Mentors</a></li>
+                <li><a href="department.html">Departments</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Mentors Section -->
+        <section id="mentor-grid" class="container">
+            <div class="section-header center-text">
+                <h2>Available Software Engineering Mentors</h2>
+                <p>Top-performing seniors ready to help you succeed.</p>
+            </div>
+
+            <div class="mentors-container">
+                <!-- Mentor 1 -->
+                <article class="mentor-card" data-skill="web javascript react mern">
+                    <div class="card-top">
+                        <div class="avatar-circle">HB</div>
+                        <div class="mentor-info">
+                            <h3>Hana Bekele</h3>
+                            <span class="badge">Full Stack Web</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><i class="fas fa-code"></i> <strong>Skills:</strong> React, Node.js, MongoDB</p>
+                        <p><i class="fas fa-graduation-cap"></i> <strong>Year:</strong> 5 (Final Year)</p>
+                        <p class="bio">"I specialize in MERN stack development. I can help you structure your final year project."</p>
+                    </div>
+                    <button class="btn-outline" onclick="contactMentor('Hana')">Request Mentorship</button>
+                </article>
+
+                <!-- Mentor 2 -->
+                <article class="mentor-card" data-skill="mobile flutter dart firebase">
+                    <div class="card-top">
+                        <div class="avatar-circle">YT</div>
+                        <div class="mentor-info">
+                            <h3>Yonas Tesfaye</h3>
+                            <span class="badge">Mobile App Dev</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><i class="fas fa-mobile-alt"></i> <strong>Skills:</strong> Flutter, Dart, Firebase</p>
+                        <p><i class="fas fa-graduation-cap"></i> <strong>Year:</strong> 4</p>
+                        <p class="bio">"Passion for building cross-platform apps. Let's debug your mobile application together."</p>
+                    </div>
+                    <button class="btn-outline" onclick="contactMentor('Yonas')">Request Mentorship</button>
+                </article>
+
+                <!-- Mentor 3 -->
+                <article class="mentor-card" data-skill="java spring backend sql">
+                    <div class="card-top">
+                        <div class="avatar-circle">LA</div>
+                        <div class="mentor-info">
+                            <h3>Lulit Alemu</h3>
+                            <span class="badge">Backend Systems</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><i class="fas fa-server"></i> <strong>Skills:</strong> Java, Spring Boot, MySQL</p>
+                        <p><i class="fas fa-graduation-cap"></i> <strong>Year:</strong> 5</p>
+                        <p class="bio">"Strong background in enterprise systems and database design. I can help with system architecture."</p>
+                    </div>
+                    <button class="btn-outline" onclick="contactMentor('Lulit')">Request Mentorship</button>
+                </article>
+
+                <!-- Mentor 4 -->
+                <article class="mentor-card" data-skill="ai python data machine learning">
+                    <div class="card-top">
+                        <div class="avatar-circle">SG</div>
+                        <div class="mentor-info">
+                            <h3>Samuel Girma</h3>
+                            <span class="badge">AI & Data</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><i class="fas fa-brain"></i> <strong>Skills:</strong> Python, TensorFlow, Pandas</p>
+                        <p><i class="fas fa-graduation-cap"></i> <strong>Year:</strong> 4</p>
+                        <p class="bio">"Interested in Machine Learning? I can guide you through data preprocessing and model building."</p>
+                    </div>
+                    <button class="btn-outline" onclick="contactMentor('Samuel')">Request Mentorship</button>
+                </article>
+
+                 <!-- Mentor 5 -->
+                 <article class="mentor-card" data-skill="devops docker cloud aws linux">
+                    <div class="card-top">
+                        <div class="avatar-circle">RM</div>
+                        <div class="mentor-info">
+                            <h3>Rahel Mulu</h3>
+                            <span class="badge">DevOps</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><i class="fas fa-cloud"></i> <strong>Skills:</strong> Docker, AWS, Linux</p>
+                        <p><i class="fas fa-graduation-cap"></i> <strong>Year:</strong> 5</p>
+                        <p class="bio">"Don't just code it, deploy it. I can help you understand cloud hosting and CI/CD pipelines."</p>
+                    </div>
+                    <button class="btn-outline" onclick="contactMentor('Rahel')">Request Mentorship</button>
+                </article>
+
+                 <!-- Mentor 6 -->
+                 <article class="mentor-card" data-skill="c++ algorithms game unity">
+                    <div class="card-top">
+                        <div class="avatar-circle">DK</div>
+                        <div class="mentor-info">
+                            <h3>Daniel Kinde</h3>
+                            <span class="badge">Algorithms</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <p><i class="fas fa-gamepad"></i> <strong>Skills:</strong> C++, Unity, Data Structures</p>
+                        <p><i class="fas fa-graduation-cap"></i> <strong>Year:</strong> 3</p>
+                        <p class="bio">"Acing Data Structures and Algorithms is key. I help with competitive programming and game logic."</p>
+                    </div>
+                    <button class="btn-outline" onclick="contactMentor('Daniel')">Request Mentorship</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Find a Mentor (Search) -->
+        <section id="search-section" class="container">
+            <div class="search-box-container highlight-border">
+                <h2><i class="fas fa-search"></i> Find a Mentor</h2>
+                <p>Filter by specific programming languages or skills.</p>
+                <form id="search-form">
+                    <div class="input-wrapper">
+                        <i class="fas fa-keyboard"></i>
+                        <input id="topic-keyword" type="search" placeholder="Type a skill (e.g., Python, React, Java)..." />
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Forms Section -->
+        <div class="forms-wrapper container section-padding">
+            <section id="request-mentorship" class="form-card highlight-border">
+                <h2>Request a Session</h2>
+                <form id="request-form">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your Name" required />
+                    </div>
+                    <div class="input-group">
+                        <label>Help Needed</label>
+                        <input type="text" placeholder="Topic (e.g. Project Help)" required />
+                    </div>
+                    <button type="submit" class="btn-gradient full-width">Send Request</button>
+                </form>
+            </section>
+
+            <section id="become-mentor" class="form-card highlight-border">
+                <h2>Join as Mentor</h2>
+                <p>Are you a senior Software Engineering student?</p>
+                <form id="mentor-register-form">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your Name" required />
+                    </div>
+                    <div class="input-group">
+                        <label>Top Skills</label>
+                        <input type="text" placeholder="e.g. React, Python" required />
+                    </div>
+                    <button type="submit" class="btn-gradient full-width">Register Now</button>
+                </form>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Campus Connect. Software Engineering Dept.</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script2,js"></script>
+</body>              
+</html>
