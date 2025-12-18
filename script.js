@@ -1,21 +1,7 @@
 window.onload = function() {
-  
     document.getElementById('year-filter').onchange = filterJobs;
     document.getElementById('stipend-filter').onchange = filterJobs;
     document.getElementById('worktype-filter').onchange = filterJobs;
-    
-    // Load applied jobs
-    let save = localStorage.getItem('applied') || '';
-    
-    document.querySelectorAll('.internship-card').forEach(card => {
-        let job = card.querySelector('h2').textContent;
-        
-        if (save.includes(job)) {
-            let btn = card.querySelector('.apply-btn');
-            btn.innerHTML = '✓ Applied';
-            btn.style.background = 'gray';
-        }
-    });
 };
 
 function filterJobs() {
@@ -38,12 +24,13 @@ function filterJobs() {
     });
 }
 
-
 document.querySelectorAll('.apply-btn').forEach(btn => {
     btn.onclick = function(e) {
         e.preventDefault();
         
-        let job = this.closest('.internship-card').querySelector('h2').textContent;
+        let card = this.closest('.internship-card');
+        let jobTitle = card.querySelector('h2');
+        let job = jobTitle.textContent;
         let url = this.getAttribute('onclick').match(/'([^']+)'/)[1];
         
         window.open(url, '_blank');
@@ -53,9 +40,10 @@ document.querySelectorAll('.apply-btn').forEach(btn => {
                 // Mark as applied
                 btn.innerHTML = '✓ Applied';
                 btn.style.background = 'gray';
+                btn.disabled = true;
                 
-                let old = localStorage.getItem('applied') || '';
-                localStorage.setItem('applied', old + '|' + job);
+                jobTitle.style.textDecoration = 'line-through';
+                jobTitle.style.color = '#888';
             }
             window.onfocus = null; 
         };
