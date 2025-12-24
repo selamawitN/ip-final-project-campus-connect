@@ -1,153 +1,190 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Study Groups — AASTU Campus Connect</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study Groups — Campus Connect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="studygroup.css">
 </head>
 <body>
-          <header>
+
+    <header>
         <nav class="navbar">
-            <div class="logo">Campus Connect</div>
+            <div class="logo-container">
+                <!-- Ensure logo.png is in the folder -->
+                <img src="pro logo-modified.png" alt="Campus Connect Logo" class="logo-img">
+                <span class="logo-text">Campus Connect</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="materials.html">Materials</a></li>
-                <li><a href="groups.html">Study Groups</a></li>
+                <li><a href="groups.html" class="active">Study Groups</a></li>
                 <li><a href="internship.html">Internships</a></li>
                 <li><a href="mentors.html">Mentors</a></li>
                 <li><a href="department.html">Departments</a></li>
             </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
-    <h2>Study Groups</h2>
 
-    <section id="create-group">
-        <h3>Create a Study Group</h3>
-        <form action="#" method="post" aria-label="Create study group form">
-            <div>
-                <input type="text" name="group_name" placeholder="Group name" required aria-label="Group name" />
-            </div><br>
-            <div>
-                <select name="subject" required aria-label="Subject">
-                    <option value="">Select subject</option>
-                    <option>Mathematics</option>
-                    <option>Physics</option>
-                    <option>Computer Science</option>
-                    <option>Biology</option>
-                    <option>Economics</option>
-                </select>
-            </div><br>
-            <div>
-                <select name="department" aria-label="Department">
-                    <option value="">Select department (optional)</option>
-                    <option>Engineering</option>
-                    <option>Sciences</option>
-                    <option>Business</option>
-                    <option>Arts</option>
-                </select>
-            </div><br>
-            <div>
-                <input type="datetime-local" name="meeting_time" aria-label="Meeting schedule" />
-            </div><br>
-            <div>
-                <input type="number" name="max_members" min="1" placeholder="Max members" aria-label="Maximum members" />
-            </div><br>
-            <div>
-                <button type="submit">Create Group</button>
-            </div>
-        </form>
-    </section>
+    <main class="main-content container">
+        <div class="page-header">
+            <h1>Software Engineering Study Groups</h1>
+            <p>Create a group to study with peers or join an existing one.</p>
+        </div>
 
-    <section id="search-groups">
-        <h3>Search / Filter Groups</h3>
-        <form action="#" method="get" aria-label="Search groups form">
-            <div>
-                <input type="text" name="q" placeholder="Search by name or subject" aria-label="Search query" />
-            </div>
-            <div>
-                <select name="filter_subject" aria-label="Filter by subject">
-                    <option value="">All subjects</option>
-                    <option>Mathematics</option>
-                    <option>Computer Science</option>
-                    <option>Physics</option>
-                </select>
-            </div>
-            <div>
-                <button type="submit">Search</button>
-            </div>
-        </form>
-    </section>
+        <div class="dashboard-grid">
+            
+            <!-- MAIN SECTION (Big Space): Forms -->
+            <section class="main-form-section">
+                
+                <!-- 1. Create Group Form -->
+                <div class="card form-card">
+                    <h3><i class="fas fa-plus-circle"></i> Create New Group</h3>
+                    <form id="create-group-form">
+                        <div class="form-group">
+                            <label>Organizer Name</label>
+                            <input type="text" id="organizer" placeholder="e.g. Selamawit" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <select id="subject" required>
+                                <option value="">Select subject</option>
+                                <option value="Database Systems">Database Systems</option>
+                                <option value="Data Structures">Data Structures</option>
+                                <option value="Algorithms">Algorithms</option>
+                                <option value="Web Development">Web Development</option>
+                            </select>
+                        </div>
 
-    <section id="groups-list">
-        <h4>Available Study Groups</h4>
-        <ul>
-            <li>
-                <article class="group-card" aria-label="Algebra Study Group">
-                    <div class="group-name"><strong>Algebra Study Group</strong> </div>
-                    <div class="group-meta"><b>Subject:</b> Mathematics</div>
-                    <div class="group-meta"><b>Meeting:</b>  Tuesdays 16:00</div>
-                    <div class="group-meta"><b>Members:</b> 4 / 8</div>
-                    <div>
-                        <button type="button" name="join" aria-label="Join Algebra Study Group">Join Group</button>
-                    </div><br>
-                </article>
-            </li>
+                        <div class="form-group">
+                            <label>Year</label>
+                            <select id="year" required>
+                                <option value="1st Year">1st Year</option>
+                                <option value="2nd Year">2nd Year</option>
+                                <option value="3rd Year">3rd Year</option>
+                                <option value="4th Year">4th Year</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Days (Click to select)</label>
+                            <div class="day-selector" id="day-selector">
+                                <span class="day-btn" data-day="Mon">Mon</span>
+                                <span class="day-btn" data-day="Tue">Tue</span>
+                                <span class="day-btn" data-day="Wed">Wed</span>
+                                <span class="day-btn" data-day="Thu">Thu</span>
+                                <span class="day-btn" data-day="Fri">Fri</span>
+                                <span class="day-btn" data-day="Sat">Sat</span>
+                                <span class="day-btn" data-day="Sun">Sun</span>
+                            </div>
+                        </div>
 
-            <li>
-                <article class="group-card" aria-label="Intro to Programming">
-                    <div class="group-name"><b>Intro to Programming</b> </div>
-                    <div class="group-meta"><b>Subject: </b> Computer Science</div>
-                    <div class="group-meta"><b> Meeting:</b> Fridays 14:30</div>
-                    <div class="group-meta"><b>Members:</b> 6 / 10</div>
-                    <div>
-                        <button type="button" name="join" aria-label="Join Intro to Programming">Join Group</button>
-                    </div><br>
-                </article>
-            </li>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Start Time</label>
+                                <input type="time" id="start-time" required>
+                            </div>
+                            <div class="form-group">
+                                <label>End Time</label>
+                                <input type="time" id="end-time" required>
+                            </div>
+                        </div>
+                        
+                         <div class="form-group">
+                            <label>Initial Members (Optional)</label>
+                            <input type="text" id="members" placeholder="e.g. Tom, Jerry">
+                        </div>
 
-            <li>
-                <article class="group-card" aria-label="Organic Chemistry Review">
-                    <div class="group-name"><b>Organic Chemistry Review</b> </div>
-                    <div class="group-meta">Subject: Biology</div>
-                    <div class="group-meta">Meeting: Monday 18:00</div>
-                    <div class="group-meta">Members: 3 / 6</div>
-                    <div>
-                        <button type="button" name="join" aria-label="Join Organic Chemistry Review">Join Group</button>
-                    </div><br>
-                </article>
-            </li>
+                        <button type="submit">Create Group</button>
+                    </form>
+                </div>
 
-            <!-- Additional group items will be rendered here -->
-        </ul>
-    </section>
-      <footer>
+                <!-- 2. Filter Form (Kept with main controls) -->
+                <div class="card form-card">
+                    <h3><i class="fas fa-filter"></i> Filter Groups</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select id="filter-year">
+                                <option value="all">Any Year</option>
+                                <option value="1st Year">1st Year</option>
+                                <option value="2nd Year">2nd Year</option>
+                                <option value="3rd Year">3rd Year</option>
+                                <option value="4th Year">4th Year</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="filter-subject">
+                                <option value="all">Any Subject</option>
+                                <option value="Database Systems">Database Systems</option>
+                                <option value="Data Structures">Data Structures</option>
+                                <option value="Web Development">Web Development</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" onclick="filterGroups()">Apply Filter</button>
+                </div>
+            </section>
+
+            <!-- SIDEBAR (Small Space): List of Groups -->
+            <aside class="sidebar-list">
+                <div class="section-header-row">
+                    <h2>Available Groups</h2>
+                    <span class="badge-count" id="group-count">0</span>
+                </div>
+
+                <div id="groups-container">
+                    <!-- Groups injected here -->
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
     <div class="footer-container">
-      <p>&copy; 2025 Campus Connect. All rights reserved.</p>
-      <div class="contact-info">
-        <p>Contact Us:</p>
-        <ul>
-          <li>Email: support@campusconnect.com</li>
-          <li>Phone: +251 912 345 678</li>
-          <li>Address: University Campus, Addis Ababa, Ethiopia</li>
-        </ul>
-      </div>
-      <div class="social-media">
-        <p>Follow Us:</p>
-        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com" target="_blank" class="social-icon">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://t.me" target="_blank" class="social-icon">
-          <i class="fab fa-telegram"></i>
-        </a>
-        <a href="https://www.tiktok.com" target="_blank" class="social-icon">
-          <i class="fab fa-tiktok"></i>
-        </a>
-      </div>
+        <div class="footer-info">
+            <h4>Campus Connect</h4>
+            <p>Connecting students for better learning, collaboration, and career opportunities. Our platform bridges the gap between academic resources and student needs.</p>
+        </div>
+        
+        <div class="contact-info">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Email: support@campusconnect.com</li>
+                <li><i class="fas fa-phone"></i> Phone: +251 912 345 678</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: University Campus, Addis Ababa, Ethiopia</li>
+            </ul>
+        </div>
+        
+        <div class="social-media">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://t.me" target="_blank" class="social-icon">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="copyright">
+        <p>&copy; 2025 Campus Connect. All rights reserved.</p>
     </div>
   </footer>
+
+    <script src="studygroup.js"></script>
 </body>
 </html>
