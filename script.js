@@ -49,3 +49,32 @@ document.querySelectorAll('.apply-btn').forEach(btn => {
         };
     };
 });
+
+function checkDeadlines() {
+    const today = new Date();
+    
+    document.querySelectorAll('.internship-card').forEach(card => {
+        
+        const deadlineRow = Array.from(card.querySelectorAll('.basic-info div'))
+            .find(div => div.innerText.includes('Deadline:'));
+        
+        if (deadlineRow) {
+            const dateParts = deadlineRow.innerText.replace('Deadline:', '').trim().split('-');
+   
+            const deadlineDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
+
+            if (today > deadlineDate) {
+                const btn = card.querySelector('.apply-btn');
+                const title = card.querySelector('h2');
+                
+                btn.innerHTML = '✕ Deadline Passed';
+                btn.style.background = '#ff4d4d'; 
+                btn.disabled = true;
+                title.style.textDecoration = 'line-through';
+                title.style.opacity = '0.5';
+            }
+        }
+    });
+}
+
+window.addEventListener('load', checkDeadlines);
