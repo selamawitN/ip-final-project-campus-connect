@@ -79,7 +79,7 @@
             padding: 8px 0;
             position: relative;
         }
-        
+        .nav-links a.active { color: #38ef7d; }
         .nav-links a:hover {
             color: #2A9D8F;
         }
@@ -105,7 +105,7 @@
             position: relative;
             background: 
                 linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%),
-                url('img/finn.jpg');
+                url('finn.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -372,9 +372,11 @@
         }
         
         .feature-card {
+            border: 2px solid #38ef7d;
+            
             background-color: white;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 0px 20px rgba(56, 239, 125, 0.35); 
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             overflow: hidden;
             display: flex;
@@ -383,7 +385,7 @@
         
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 30px  rgba(56, 239, 125, 0.35); 
         }
         
         .feature-image {
@@ -391,7 +393,7 @@
             height: 200px;
             border-radius: 5px;
             object-fit: cover;
-            border-bottom: 3px solid #060606;
+            border-bottom: 3px solid rgba(56, 239, 125, 0.35);
         }
         
         .feature-content {
