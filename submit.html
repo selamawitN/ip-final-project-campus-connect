@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Uploaded Materials</title>
-    <link rel="stylesheet" href="sumbit.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="submit.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="materialsharing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,18 +16,27 @@
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="logo">Campus Connect</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="materials-list.html">Materials</a></li>
-            <li><a href="groups.html">Study Groups</a></li>
-            <li><a href="internship.html">Internships</a></li>
-            <li><a href="mentors.html">Mentors</a></li>
-            <li><a href="departments.html">Departments</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="pro logo-modified.png" alt="Campus Connect Logo" class="logo-img">
+                Campus Connect
+            </div>
+            
+            <button class="burger-menu" id="burgerMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="materials.html" >Upload Materials</a></li>
+                <li><a href="studygroup.html">Study Groups</a></li>
+                <li><a href="internship.html">Internships</a></li>
+                <li><a href="mentors.html">Mentors</a></li>
+                <li><a href="department.html">Departments</a></li>
+                <li><a href="submit.html" class="active">materials</a></li>
+            </ul>
+        </nav>
+    </header>
 <div class="main-title">
     <span class="title-text">UPLOADED MATERIALS</span>
 
@@ -70,17 +81,45 @@
 </div>
 <div class="share">
 
-<footer class="footer">
-    <p>&copy; 2025 Campus Connect. All rights reserved.</p>
-
-    <div class="social">
-        <a><i class="fab fa-linkedin"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-telegram"></i></a>
-        <a><i class="fab fa-tiktok"></i></a>
+<footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <h4>Campus Connect</h4>
+            <p>Connecting students for better learning, collaboration, and career opportunities. Our platform bridges the gap between academic resources and student needs.</p>
+        </div>
+        
+        <div class="contact-info">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Email: support@campusconnect.com</li>
+                <li><i class="fas fa-phone"></i> Phone: +251 912 345 678</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: University Campus, Addis Ababa, Ethiopia</li>
+            </ul>
+        </div>
+        
+        <div class="social-media">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://t.me" target="_blank" class="social-icon">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
     </div>
-</footer>
-  </div>
+    
+    <div class="copyright">
+        <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+    </div>
+  </footer>
 <script src="search.js"></script>
 
 </body>
