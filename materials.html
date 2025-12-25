@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect</title>
+    
+    <link rel="stylesheet" href="materialsharing.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="pro logo-modified.png" alt="Campus Connect Logo" class="logo-img">
+                Campus Connect
+            </div>
+            
+            <button class="burger-menu" id="burgerMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="materials.html" class="active"> Upload Materials</a></li>
+                <li><a href="studygroup.html">Study Groups</a></li>
+                <li><a href="internship.html">Internships</a></li>
+                <li><a href="mentors.html">Mentors</a></li>
+                <li><a href="department.html">Departments</a></li>
+                 <li><a href="submit.html">materials</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="form-card">
+            <div style="margin-bottom: 20px;">
+                <label for="materialtitle"><b style="font-size: 25px;">Course:</b></label>
+                <input type="text" id="materialtitle" placeholder="Eg. INTERNET PROGRAMMING" required class="input-box"/>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label for="fulln"><b style="font-size: 25px;">Full name:</b></label>
+                <input type="text" id="fulln" placeholder="Ornina Dereje (optional)" class="input-box"/>
+
+            </div>
+            <h2 class="section-title" style="font-size: 25px;">Choose The Year of Study</h2>
+            <div class="year-options" style="margin-bottom: 20px;">
+                <label><input type="radio" name="year" value="2nd"> 2nd Year</label>
+                <label><input type="radio" name="year" value="3rd"> 3rd Year</label>
+                <label><input type="radio" name="year" value="4th"> 4th Year</label>
+                <label><input type="radio" name="year" value="5th"> 5th Year</label>
+            </div>
+            <h2 class="section-title" style="font-size: 25px;">Department</h2>
+            <select id="department" class="input-box" style="margin-bottom: 20px;">
+                <option>Software</option>
+            </select>
+            <h2 class="section-title" style="font-size: 25px;">Material Type</h2>
+            <select id="type" class="input-box" style="margin-bottom: 20px;">
+                <option value="Assignment">Assignment</option>
+                <option value="Power point">Power point</option>
+                <option value="Module">Module</option>
+                <option value="Lab Activities">Lab Activities</option>
+                <option value="Quiz">Quiz</option>
+                <option value="Mid">Mid</option>
+                <option value="Class test">Class test</option>
+                <option value="Final Exam">Final Exam</option>
+                <option value="Reference">Reference</option>
+            </select>
+            <h2 class="section-title" style="font-size: 25px;">Upload Material</h2>
+            <input type="file" id="file" class="file-input" style="margin-bottom: 30px;">
+            <div class="button-group">
+                <button type="reset" class="btn reset">Reset</button>
+                <button type="button" class="btn submit" onclick="window.location.href='submit.html'">
+  Submit
+</button>
+
+
+
+            </div>
+        </div>
+    </section>
+    <div class="share">
+        <h3 class="thanks">THANK YOU FOR SHARING!</h3>
+          <footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <h4>Campus Connect</h4>
+            <p>Connecting students for better learning, collaboration, and career opportunities. Our platform bridges the gap between academic resources and student needs.</p>
+        </div>
+        
+        <div class="contact-info">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Email: support@campusconnect.com</li>
+                <li><i class="fas fa-phone"></i> Phone: +251 912 345 678</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: University Campus, Addis Ababa, Ethiopia</li>
+            </ul>
+        </div>
+        
+        <div class="social-media">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://t.me" target="_blank" class="social-icon">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="copyright">
+        <p>&copy; 2025 Campus Connect. All rights reserved.</p>
+    </div>
+  </footer>
+    </div>
+    <script src="upload.js"></script>
+    <script src="index.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
